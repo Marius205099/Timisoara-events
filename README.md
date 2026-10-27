@@ -38,6 +38,8 @@ The same page, as a public site anyone can open without an account, refreshed on
 3. Repository → **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 4. **Actions → Public website (GitHub Pages) → Run workflow** (the first run takes about 15 minutes).
 5. The site is at `https://<user>.github.io/ce-facem-timisoara/`.
+   `.github/workflows/keepalive.yml` makes an empty commit every month so GitHub does not disable the
+   schedule after 60 days without activity.
    Optional repository variable `NOMINATIM_EMAIL` (Settings → Secrets and variables → Actions → Variables).
 
 ## Run locally (no accounts needed)
