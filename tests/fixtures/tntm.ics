@@ -1,0 +1,475 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//wp-events-plugin.com//6.1.4//EN
+BEGIN:VEVENT
+UID:1431@tntm.ro
+DTSTART:20261029T170000Z
+DTEND:20261029T170000Z
+DTSTAMP:20260909T101836Z
+URL:https://www.tntm.ro/programul-lunii/underground-fm-17/
+SUMMARY:UNDERGROUND FM - Studio "UTU Strugari" - 29 oct. 26 19:00
+DESCRIPTION:UNDERGROUND FM\n\n\n[DKB url="https://www.eventim.ro/event/unde
+ rground-fm-teatrul-national-timisoara-studio-utu-strugari-22098242/" text=
+ "Cumpără bilet" title="Cumpără bilet" type="large" style="gradient" co
+ lor="red" height="10" width="200" opennewwindow="yes" nofollow="yes"]\n\n[
+ DKB url="https://questionpro.eu/t/AB3u5VGZB3wa2W" text="Chestionar" title=
+ "Chestionar" type="large" style="gradient" color="blue" height="10" width=
+ "200" opennewwindow="yes" nofollow="yes"]\n\n Regulamentul spectatorului
+ATTACH;FMTTYPE=image/jpeg:https://www.tntm.ro/wp-content/uploads/2024/12/1
+ 6underground-fm-darie-doklean.jpg
+CATEGORIES:+16 ani
+LOCATION:Studio "UTU Strugari"\, Mărășești 2\, et.V\, Timișoara\, 3000
+ 86\, Romania
+GEO:45.755069;21.22571300000004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Mărășești 2\, et.V\, Ti
+ mișoara\, 300086\, Romania;X-APPLE-RADIUS=100;X-TITLE=Studio \"UTU Struga
+ ri\":geo:45.755069,21.22571300000004
+END:VEVENT
+BEGIN:VEVENT
+UID:1441@tntm.ro
+DTSTART:20261031T170000Z
+DTEND:20261031T170000Z
+DTSTAMP:20261012T084145Z
+URL:https://www.tntm.ro/programul-lunii/edmond/
+SUMMARY:EDMOND - Sala Mare - 31 oct. 26 19:00
+DESCRIPTION:EDMOND\n[DKB url="https://www.eventim.ro/event/edmond-teatrul-n
+ ational-mihai-eminescu-22156541/" text="Cumpără bilet" title="Cumpără 
+ bilet" type="large" style="gradient" color="red" height="10" width="200" o
+ pennewwindow="yes" nofollow="yes"]\n\n[DKB url="https://questionpro.eu/t/A
+ B3u5VGZB3wa2W" text="Chestionar" title="Chestionar" type="large" style="gr
+ adient" color="blue" height="10" width="200" opennewwindow="yes" nofollow=
+ "yes"]\n\n Regulamentul spectatorului
+ATTACH;FMTTYPE=image/jpeg:https://www.tntm.ro/wp-content/uploads/2026/09/e
+ dmond-l.jpeg
+CATEGORIES:+18 ani
+LOCATION:Sala Mare\, Mărăşeşti 2\, Timisoara\, 300086\, Romania
+GEO:45.756068;21.225809
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Mărăşeşti 2\, Timisoara
+ \, 300086\, Romania;X-APPLE-RADIUS=100;X-TITLE=Sala Mare:geo:45.756068,21.
+ 225809
+END:VEVENT
+BEGIN:VEVENT
+UID:1442@tntm.ro
+DTSTART:20261101T170000Z
+DTEND:20261101T170000Z
+DTSTAMP:20261012T084223Z
+URL:https://www.tntm.ro/programul-lunii/edmond-2/
+SUMMARY:EDMOND - Sala Mare - 1 nov. 26 19:00
+DESCRIPTION:EDMOND\n[DKB url="https://www.eventim.ro/event/edmond-teatrul-n
+ ational-mihai-eminescu-22157035/" text="Cumpără bilet" title="Cumpără 
+ bilet" type="large" style="gradient" color="red" height="10" width="200" o
+ pennewwindow="yes" nofollow="yes"]\n\n[DKB url="https://questionpro.eu/t/A
+ B3u5VGZB3wa2W" text="Chestionar" title="Chestionar" type="large" style="gr
+ adient" color="blue" height="10" width="200" opennewwindow="yes" nofollow=
+ "yes"]\n\n Regulamentul spectatorului
+ATTACH;FMTTYPE=image/jpeg:https://www.tntm.ro/wp-content/uploads/2026/09/e
+ dmond-l.jpeg
+CATEGORIES:+18 ani
+LOCATION:Sala Mare\, Mărăşeşti 2\, Timisoara\, 300086\, Romania
+GEO:45.756068;21.225809
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Mărăşeşti 2\, Timisoara
+ \, 300086\, Romania;X-APPLE-RADIUS=100;X-TITLE=Sala Mare:geo:45.756068,21.
+ 225809
+END:VEVENT
+BEGIN:VEVENT
+UID:1448@tntm.ro
+DTSTART:20261104T170000Z
+DTEND:20261104T170000Z
+DTSTAMP:20261003T105708Z
+URL:https://www.tntm.ro/programul-lunii/breaking-news-14/
+SUMMARY:BREAKING NEWS - Studio "UTU Strugari" - 4 nov. 26 19:00
+DESCRIPTION:BREAKING NEWS\n\n[DKB url="https://www.eventim.ro/event/breakin
+ g-news-teatrul-national-timisoara-studio-utu-strugari-22224025/" text="Cum
+ pără bilet" title="Cumpără bilet" type="large" style="gradient" color=
+ "red" height="10" width="200" opennewwindow="yes" nofollow="yes"]\n\n[DKB 
+ url="https://questionpro.eu/t/AB3u5VGZB3wa2W" text="Chestionar" title="Che
+ stionar" type="large" style="gradient" color="blue" height="10" width="200
+ " opennewwindow="yes" nofollow="yes"]\n\n Regulamentul spectatorului
+ATTACH;FMTTYPE=image/jpeg:https://www.tntm.ro/wp-content/uploads/2022/12/I
+ mage-021_resize.jpg
+CATEGORIES:+12 ani
+LOCATION:Studio "UTU Strugari"\, Mărășești 2\, et.V\, Timișoara\, 3000
+ 86\, Romania
+GEO:45.755069;21.22571300000004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Mărășești 2\, et.V\, Ti
+ mișoara\, 300086\, Romania;X-APPLE-RADIUS=100;X-TITLE=Studio \"UTU Struga
+ ri\":geo:45.755069,21.22571300000004
+END:VEVENT
+BEGIN:VEVENT
+UID:1444@tntm.ro
+DTSTART:20261106T170000Z
+DTEND:20261106T170000Z
+DTSTAMP:20261003T105739Z
+URL:https://www.tntm.ro/programul-lunii/o-noapte-furtunoasa-un-exercitiu-3
+ 7/
+SUMMARY:O NOAPTE FURTUNOASA. UN EXERCITIU - Studio "UTU Strugari" - 6 nov. 
+ 26 19:00
+DESCRIPTION:durata spectacolului: 1h 10\n\nO NOAPTE FURTUNOASĂ. UN EXERCI
+ ȚIU\n\n[DKB url="https://www.eventim.ro/event/o-noapte-furtunoasa-un-exer
+ citiu-teatrul-national-timisoara-studio-utu-strugari-22224120/" text="Cump
+ ără bilet" title="Cumpără bilet" type="large" style="gradient" color="
+ red" height="10" width="200" opennewwindow="yes" nofollow="yes"]\n\n[DKB u
+ rl="https://questionpro.eu/t/AB3u5VGZB3wa2W" text="Chestionar" title="Ches
+ tionar" type="large" style="gradient" color="blue" height="10" width="200"
+  opennewwindow="yes" nofollow="yes"]\n\n&nbsp\;\n\n Regulamentul spectator
+ ului
+ATTACH;FMTTYPE=image/jpeg:https://www.tntm.ro/wp-content/uploads/2021/11/o
+ -noapte-furtunoasa.jpg
+CATEGORIES:+12 ani
+LOCATION:Studio "UTU Strugari"\, Mărășești 2\, et.V\, Timișoara\, 3000
+ 86\, Romania
+GEO:45.755069;21.22571300000004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Mărășești 2\, et.V\, Ti
+ mișoara\, 300086\, Romania;X-APPLE-RADIUS=100;X-TITLE=Studio \"UTU Struga
+ ri\":geo:45.755069,21.22571300000004
+END:VEVENT
+BEGIN:VEVENT
+UID:1449@tntm.ro
+DTSTART:20261108T170000Z
+DTEND:20261108T170000Z
+DTSTAMP:20261003T105808Z
+URL:https://www.tntm.ro/programul-lunii/aeroport-21/
+SUMMARY:AEROPORT - Studio "UTU Strugari" - 8 nov. 26 19:00
+DESCRIPTION:durata spectacolului: 1h 40\nAEROPORT\n\n[DKB url="https://www.
+ eventim.ro/event/aeroport-teatrul-national-timisoara-studio-utu-strugari-2
+ 2224119/" text="Cumpără bilet" title="Cumpără bilet" type="large" styl
+ e="gradient" color="red" height="10" width="200" opennewwindow="yes" nofol
+ low="yes"]\n\n[DKB url="https://questionpro.eu/t/AB3u5VGZB3wa2W" text="Che
+ stionar" title="Chestionar" type="large" style="gradient" color="blue" hei
+ ght="10" width="200" opennewwindow="yes" nofollow="yes"]\n\n Regulamentul 
+ spectatorului
+ATTACH;FMTTYPE=image/jpeg:https://www.tntm.ro/wp-content/uploads/2011/12/a
+ eroportweb.jpg
+CATEGORIES:+12 ani
+LOCATION:Studio "UTU Strugari"\, Mărășești 2\, et.V\, Timișoara\, 3000
+ 86\, Romania
+GEO:45.755069;21.22571300000004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Mărășești 2\, et.V\, Ti
+ mișoara\, 300086\, Romania;X-APPLE-RADIUS=100;X-TITLE=Studio \"UTU Struga
+ ri\":geo:45.755069,21.22571300000004
+END:VEVENT
+BEGIN:VEVENT
+UID:1450@tntm.ro
+DTSTART:20261111T170000Z
+DTEND:20261111T170000Z
+DTSTAMP:20261003T105838Z
+URL:https://www.tntm.ro/programul-lunii/cercurile-increderii-18/
+SUMMARY:CERCURILE ÎNCREDERII - Studio "UTU Strugari" - 11 nov. 26 19:00
+DESCRIPTION:CERCURILE ÎNCREDERII\n\n[DKB url="https://www.eventim.ro/event
+ /cercurile-increderii-teatrul-national-timisoara-studio-utu-strugari-22224
+ 317/" text="Cumpără bilet" title="Cumpără bilet" type="large" style="g
+ radient" color="red" height="10" width="200" opennewwindow="yes" nofollow=
+ "yes"]\n\n[DKB url="https://questionpro.eu/t/AB3u5VGZB3wa2W" text="Chestio
+ nar" title="Chestionar" type="large" style="gradient" color="blue" height=
+ "10" width="200" opennewwindow="yes" nofollow="yes"]\n\n Regulamentul spec
+ tatorului\n\n
+ATTACH;FMTTYPE=image/jpeg:https://www.tntm.ro/wp-content/uploads/2018/11/c
+ ercurile-increderii-9162.jpg
+CATEGORIES:+14 ani
+LOCATION:Studio "UTU Strugari"\, Mărășești 2\, et.V\, Timișoara\, 3000
+ 86\, Romania
+GEO:45.755069;21.22571300000004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Mărășești 2\, et.V\, Ti
+ mișoara\, 300086\, Romania;X-APPLE-RADIUS=100;X-TITLE=Studio \"UTU Struga
+ ri\":geo:45.755069,21.22571300000004
+END:VEVENT
+BEGIN:VEVENT
+UID:1446@tntm.ro
+DTSTART:20261113T170000Z
+DTEND:20261113T170000Z
+DTSTAMP:20261003T105927Z
+URL:https://www.tntm.ro/programul-lunii/mata-hari-21/
+SUMMARY:MATA HARI - Studio "UTU Strugari" - 13 nov. 26 19:00
+DESCRIPTION:Durata spectacolului: 1h\nMATA HARI\n\n[DKB url="https://www.ev
+ entim.ro/event/mata-hari-teatrul-national-timisoara-studio-utu-strugari-22
+ 224318/" text="Cumpără bilet" title="Cumpără bilet" type="large" style
+ ="gradient" color="red" height="10" width="200" opennewwindow="yes" nofoll
+ ow="yes"]\n\n[DKB url="https://questionpro.eu/t/AB3u5VGZB3wa2W" text="Ches
+ tionar" title="Chestionar" type="large" style="gradient" color="blue" heig
+ ht="10" width="200" opennewwindow="yes" nofollow="yes"]\n\n Regulamentul s
+ pectatorului
+ATTACH;FMTTYPE=image/jpeg:https://www.tntm.ro/wp-content/uploads/2018/04/M
+ ataHari-w.jpg
+CATEGORIES:+12 ani
+LOCATION:Studio "UTU Strugari"\, Mărășești 2\, et.V\, Timișoara\, 3000
+ 86\, Romania
+GEO:45.755069;21.22571300000004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Mărășești 2\, et.V\, Ti
+ mișoara\, 300086\, Romania;X-APPLE-RADIUS=100;X-TITLE=Studio \"UTU Struga
+ ri\":geo:45.755069,21.22571300000004
+END:VEVENT
+BEGIN:VEVENT
+UID:1451@tntm.ro
+DTSTART:20261115T170000Z
+DTEND:20261115T170000Z
+DTSTAMP:20261003T110238Z
+URL:https://www.tntm.ro/programul-lunii/canicula-15/
+SUMMARY:CANICULA - Studio "UTU Strugari" - 15 nov. 26 19:00
+DESCRIPTION:durata spectacolului: 1h 15\n\nCANICULA\n\n[DKB url="https://ww
+ w.eventim.ro/event/canicula-teatrul-national-timisoara-studio-utu-strugari
+ -22224333/" text="Cumpără bilet" title="Cumpără bilet" type="large" st
+ yle="gradient" color="red" height="10" width="200" opennewwindow="yes" nof
+ ollow="yes"]\n\n[DKB url="https://questionpro.eu/t/AB3u5VGZB3wa2W" text="C
+ hestionar" title="Chestionar" type="large" style="gradient" color="blue" h
+ eight="10" width="200" opennewwindow="yes" nofollow="yes"]\n\n&nbsp\;\n\n 
+ Regulamentul spectatorului
+ATTACH;FMTTYPE=image/jpeg:https://www.tntm.ro/wp-content/uploads/2014/05/C
+ ANICULA.jpg
+CATEGORIES:+15 ani
+LOCATION:Studio "UTU Strugari"\, Mărășești 2\, et.V\, Timișoara\, 3000
+ 86\, Romania
+GEO:45.755069;21.22571300000004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Mărășești 2\, et.V\, Ti
+ mișoara\, 300086\, Romania;X-APPLE-RADIUS=100;X-TITLE=Studio \"UTU Struga
+ ri\":geo:45.755069,21.22571300000004
+END:VEVENT
+BEGIN:VEVENT
+UID:1455@tntm.ro
+DTSTART:20261116T090000Z
+DTEND:20261116T090000Z
+DTSTAMP:20261003T110316Z
+URL:https://www.tntm.ro/programul-lunii/pinocchio-3/
+SUMMARY:PINOCCHIO - Sala Mare - 16 nov. 26 11:00
+DESCRIPTION: PINOCCHIO\n\n\n[DKB url="https://www.eventim.ro/event/pinocchi
+ o-teatrul-national-mihai-eminescu-22224334/" text="Cumpără bilet" title=
+ "Cumpără bilet" type="large" style="gradient" color="red" height="10" wi
+ dth="200" opennewwindow="yes" nofollow="yes"]\n\n[DKB url="https://questio
+ npro.eu/t/AB3u5VGZB3wa2W" text="Chestionar" title="Chestionar" type="large
+ " style="gradient" color="blue" height="10" width="200" opennewwindow="yes
+ " nofollow="yes"]\n\n&nbsp\;\n\n Regulamentul spectatorului
+ATTACH;FMTTYPE=image/jpeg:https://www.tntm.ro/wp-content/uploads/2026/10/P
+ INOCHIO-20.JPG_2-1.jpg
+CATEGORIES:pt.copii
+LOCATION:Sala Mare\, Mărăşeşti 2\, Timisoara\, 300086\, Romania
+GEO:45.756068;21.225809
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Mărăşeşti 2\, Timisoara
+ \, 300086\, Romania;X-APPLE-RADIUS=100;X-TITLE=Sala Mare:geo:45.756068,21.
+ 225809
+END:VEVENT
+BEGIN:VEVENT
+UID:1443@tntm.ro
+DTSTART:20261116T170000Z
+DTEND:20261116T170000Z
+DTSTAMP:20261003T110022Z
+URL:https://www.tntm.ro/programul-lunii/o-scrisoare-pierduta-25/
+SUMMARY:O SCRISOARE PIERDUTĂ - Sala Mare - 16 nov. 26 19:00
+DESCRIPTION:O SCRISOARE PIERDUTĂ\n\n[DKB url="https://www.eventim.ro/event
+ /o-scrisoare-pierduta-teatrul-national-mihai-eminescu-22224336/" text="Cum
+ pără bilet" title="Cumpără bilet" type="large" style="gradient" color=
+ "red" height="10" width="200" opennewwindow="yes" nofollow="yes"]\n\n[DKB 
+ url="https://questionpro.eu/t/AB3u5VGZB3wa2W" text="Chestionar" title="Che
+ stionar" type="large" style="gradient" color="blue" height="10" width="200
+ " opennewwindow="yes" nofollow="yes"]\n\n Regulamentul spectatorului
+ATTACH;FMTTYPE=image/jpeg:https://www.tntm.ro/wp-content/uploads/2011/10/S
+ crisoare.jpg
+CATEGORIES:+12 ani
+LOCATION:Sala Mare\, Mărăşeşti 2\, Timisoara\, 300086\, Romania
+GEO:45.756068;21.225809
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Mărăşeşti 2\, Timisoara
+ \, 300086\, Romania;X-APPLE-RADIUS=100;X-TITLE=Sala Mare:geo:45.756068,21.
+ 225809
+END:VEVENT
+BEGIN:VEVENT
+UID:1452@tntm.ro
+DTSTART:20261118T100000Z
+DTEND:20261118T100000Z
+DTSTAMP:20261003T110422Z
+URL:https://www.tntm.ro/programul-lunii/sarea-in-bucate-3/
+SUMMARY:SAREA ÎN BUCATE - Sala Mare - 18 nov. 26 12:00
+DESCRIPTION: Sarea în bucate\n\n\n[DKB url="https://www.eventim.ro/event/s
+ area-in-bucate-teatrul-national-mihai-eminescu-22224338/" text="Cumpără 
+ bilet" title="Cumpără bilet" type="large" style="gradient" color="red" h
+ eight="10" width="200" opennewwindow="yes" nofollow="yes"]\n\n[DKB url="ht
+ tps://questionpro.eu/t/AB3u5VGZB3wa2W" text="Chestionar" title="Chestionar
+ " type="large" style="gradient" color="blue" height="10" width="200" openn
+ ewwindow="yes" nofollow="yes"]\n\n&nbsp\;\n\n Regulamentul spectatorului
+ATTACH;FMTTYPE=image/jpeg:https://www.tntm.ro/wp-content/uploads/2013/05/s
+ areanbucater.jpg
+CATEGORIES:pt.copii
+LOCATION:Sala Mare\, Mărăşeşti 2\, Timisoara\, 300086\, Romania
+GEO:45.756068;21.225809
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Mărăşeşti 2\, Timisoara
+ \, 300086\, Romania;X-APPLE-RADIUS=100;X-TITLE=Sala Mare:geo:45.756068,21.
+ 225809
+END:VEVENT
+BEGIN:VEVENT
+UID:1453@tntm.ro
+DTSTART:20261118T170000Z
+DTEND:20261118T170000Z
+DTSTAMP:20261003T110501Z
+URL:https://www.tntm.ro/programul-lunii/adevarul-24/
+SUMMARY:ADEVĂRUL - Sala Mare - 18 nov. 26 19:00
+DESCRIPTION:ADEVĂRUL\n\n[DKB url="https://www.eventim.ro/event/adevarul-te
+ atrul-national-mihai-eminescu-22224339/" text="Cumpără bilet" title="Cum
+ pără bilet" type="large" style="gradient" color="red" height="10" width=
+ "200" opennewwindow="yes" nofollow="yes"]\n\n[DKB url="https://questionpro
+ .eu/t/AB3u5VGZB3wa2W" text="Chestionar" title="Chestionar" type="large" st
+ yle="gradient" color="blue" height="10" width="200" opennewwindow="yes" no
+ follow="yes"]\n\n Regulamentul spectatorului
+ATTACH;FMTTYPE=image/jpeg:https://www.tntm.ro/wp-content/uploads/2023/11/A
+ DEVARUL22.jpg
+CATEGORIES:+12 ani
+LOCATION:Sala Mare\, Mărăşeşti 2\, Timisoara\, 300086\, Romania
+GEO:45.756068;21.225809
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Mărăşeşti 2\, Timisoara
+ \, 300086\, Romania;X-APPLE-RADIUS=100;X-TITLE=Sala Mare:geo:45.756068,21.
+ 225809
+END:VEVENT
+BEGIN:VEVENT
+UID:1445@tntm.ro
+DTSTART:20261120T170000Z
+DTEND:20261120T170000Z
+DTSTAMP:20261003T110203Z
+URL:https://www.tntm.ro/programul-lunii/amintiri-din-epoca-de-scoala-40/
+SUMMARY:AMINTIRI DIN EPOCA DE ȘCOALĂ - Studio "UTU Strugari" - 20 nov. 26
+  19:00
+DESCRIPTION:durata spectacolului: 1h 5\n\nAMINTIRI DIN EPOCA DE ȘCOALĂ\n\
+ n[DKB url="https://www.eventim.ro/event/amintiri-din-epoca-de-scoala-teatr
+ ul-national-timisoara-studio-utu-strugari-22224340/" text="Cumpără bilet
+ " title="Cumpără bilet" type="large" style="gradient" color="red" height
+ ="10" width="200" opennewwindow="yes" nofollow="yes"]\n\n[DKB url="https:/
+ /questionpro.eu/t/AB3u5VGZB3wa2W" text="Chestionar" title="Chestionar" typ
+ e="large" style="gradient" color="blue" height="10" width="200" opennewwin
+ dow="yes" nofollow="yes"]\n\n Regulamentul spectatorului
+ATTACH;FMTTYPE=image/jpeg:https://www.tntm.ro/wp-content/uploads/2022/11/a
+ mintiri-din-epoca-de-scoala-005.jpg
+CATEGORIES:+12 ani
+LOCATION:Studio "UTU Strugari"\, Mărășești 2\, et.V\, Timișoara\, 3000
+ 86\, Romania
+GEO:45.755069;21.22571300000004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Mărășești 2\, et.V\, Ti
+ mișoara\, 300086\, Romania;X-APPLE-RADIUS=100;X-TITLE=Studio \"UTU Struga
+ ri\":geo:45.755069,21.22571300000004
+END:VEVENT
+BEGIN:VEVENT
+UID:1456@tntm.ro
+DTSTART:20261123T090000Z
+DTEND:20261123T090000Z
+DTSTAMP:20261003T110347Z
+URL:https://www.tntm.ro/programul-lunii/pinocchio-2/
+SUMMARY:PINOCCHIO - Sala Mare - 23 nov. 26 11:00
+DESCRIPTION: PINOCCHIO\n\n\n[DKB url="https://www.eventim.ro/event/pinocchi
+ o-teatrul-national-mihai-eminescu-22224341/" text="Cumpără bilet" title=
+ "Cumpără bilet" type="large" style="gradient" color="red" height="10" wi
+ dth="200" opennewwindow="yes" nofollow="yes"]\n\n[DKB url="https://questio
+ npro.eu/t/AB3u5VGZB3wa2W" text="Chestionar" title="Chestionar" type="large
+ " style="gradient" color="blue" height="10" width="200" opennewwindow="yes
+ " nofollow="yes"]\n\n&nbsp\;\n\n Regulamentul spectatorului
+ATTACH;FMTTYPE=image/jpeg:https://www.tntm.ro/wp-content/uploads/2026/10/P
+ INOCHIO-20.JPG_2-1.jpg
+CATEGORIES:generală,pt.copii
+LOCATION:Sala Mare\, Mărăşeşti 2\, Timisoara\, 300086\, Romania
+GEO:45.756068;21.225809
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Mărăşeşti 2\, Timisoara
+ \, 300086\, Romania;X-APPLE-RADIUS=100;X-TITLE=Sala Mare:geo:45.756068,21.
+ 225809
+END:VEVENT
+BEGIN:VEVENT
+UID:1454@tntm.ro
+DTSTART:20261123T170000Z
+DTEND:20261123T170000Z
+DTSTAMP:20261003T110538Z
+URL:https://www.tntm.ro/programul-lunii/sunt-o-baba-comunista-37/
+SUMMARY:SUNT O BABĂ COMUNISTĂ - Sala Mare - 23 nov. 26 19:00
+DESCRIPTION:SUNT O BABĂ COMUNISTĂ\n\n[DKB url="https://www.eventim.ro/eve
+ nt/sunt-o-baba-comunista-teatrul-national-mihai-eminescu-22224343/" text="
+ Cumpără bilet" title="Cumpără bilet" type="large" style="gradient" col
+ or="red" height="10" width="200" opennewwindow="yes" nofollow="yes"]\n\n[D
+ KB url="https://questionpro.eu/t/AB3u5VGZB3wa2W" text="Chestionar" title="
+ Chestionar" type="large" style="gradient" color="blue" height="10" width="
+ 200" opennewwindow="yes" nofollow="yes"]\n&nbsp\;\n\n Regulamentul spectat
+ orului\n\n
+ATTACH;FMTTYPE=image/jpeg:https://www.tntm.ro/wp-content/uploads/2019/10/s
+ unt-o-baba-comunista-1.jpg
+CATEGORIES:+12 ani
+LOCATION:Sala Mare\, Mărăşeşti 2\, Timisoara\, 300086\, Romania
+GEO:45.756068;21.225809
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Mărăşeşti 2\, Timisoara
+ \, 300086\, Romania;X-APPLE-RADIUS=100;X-TITLE=Sala Mare:geo:45.756068,21.
+ 225809
+END:VEVENT
+BEGIN:VEVENT
+UID:1447@tntm.ro
+DTSTART:20261125T170000Z
+DTEND:20261125T170000Z
+DTSTAMP:20261003T110103Z
+URL:https://www.tntm.ro/programul-lunii/absurdinia-12/
+SUMMARY:ABSURDINIA - Studio "UTU Strugari" - 25 nov. 26 19:00
+DESCRIPTION:ABSURDINIA\n\n[DKB url="https://www.eventim.ro/event/absurdinia
+ -teatrul-national-timisoara-studio-utu-strugari-22224342/" text="Cumpără
+  bilet" title="Cumpără bilet" type="large" style="gradient" color="red" 
+ height="10" width="200" opennewwindow="yes" nofollow="yes"]\n\n Regulament
+ ul spectatorului
+ATTACH;FMTTYPE=image/jpeg:https://www.tntm.ro/wp-content/uploads/2024/12/a
+ bsurdinia.jpeg
+CATEGORIES:+12 ani
+LOCATION:Studio "UTU Strugari"\, Mărășești 2\, et.V\, Timișoara\, 3000
+ 86\, Romania
+GEO:45.755069;21.22571300000004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Mărășești 2\, et.V\, Ti
+ mișoara\, 300086\, Romania;X-APPLE-RADIUS=100;X-TITLE=Studio \"UTU Struga
+ ri\":geo:45.755069,21.22571300000004
+END:VEVENT
+BEGIN:VEVENT
+UID:1457@tntm.ro
+DTSTART:20261128T170000Z
+DTEND:20261128T170000Z
+DTSTAMP:20261009T110712Z
+URL:https://www.tntm.ro/programul-lunii/polyxena/
+SUMMARY:POLYXENA - Studio "UTU Strugari" - 28 nov. 26 19:00
+DESCRIPTION: POLYXENA\n\nconcert performativ FOX ON ICE(Austria)\nspectacol
+  în limba engleză\, subtitrat în limba română\nspectacol prezentat cu
+  sprijinul Forumului Cultural Austriac\n\nȘi la sinopsis\, poate punem ce
+ va de aici: Fox On Ice reinterpretează mitul nemuritor al Troiei: o civil
+ izație distrusă de un război crud și infantil care i-a zdruncinat fund
+ amentele.\nFemeile ale căror voci și perspective au fost atât de des tr
+ ecute cu vederea își revendică locul în poveste prin cântece\, imagin
+ i\, scene și narațiuni – creând un strigăt vital împotriva stupidit
+ ății de neînțeles a războiului – o perversiune umană aparent de ne
+ îndepărtat.\nMixând elemente din teatru\, cinema\, literatură și muzi
+ ca rock alternativă\, spectacolul creează conexiuni dinamice între scen
+ ă și ecran\, voce și corp\, mit și muzică\, într-o întâlnire capti
+ vantă. \nPOLYXENA a avut premiera în august 2026 la Troia/Çanakkale\, T
+ urcia. Spectacolul se află într-un turneu internațional\, cu reprezenta
+ ții în Turcia\, Grecia\, România\, Moldova\, Germania\, Austria și Ind
+ ia.\n\n\n[DKB url="https://www.eventim.ro/event/polyxena-teatrul-national-
+ timisoara-studio-utu-strugari-22226854/" text="Cumpără bilet" title="Cum
+ pără bilet" type="large" style="gradient" color="red" height="10" width=
+ "200" opennewwindow="yes" nofollow="yes"]\n\n[DKB url="https://questionpro
+ .eu/t/AB3u5VGZB3wa2W" text="Chestionar" title="Chestionar" type="large" st
+ yle="gradient" color="blue" height="10" width="200" opennewwindow="yes" no
+ follow="yes"]\n\n&nbsp\;\n\n Regulamentul spectatorului\n\n\n
+ATTACH;FMTTYPE=image/jpeg:https://www.tntm.ro/wp-content/uploads/2026/10/P
+ olyxena.jpg
+CATEGORIES:+12 ani
+LOCATION:Studio "UTU Strugari"\, Mărășești 2\, et.V\, Timișoara\, 3000
+ 86\, Romania
+GEO:45.755069;21.22571300000004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Mărășești 2\, et.V\, Ti
+ mișoara\, 300086\, Romania;X-APPLE-RADIUS=100;X-TITLE=Studio \"UTU Struga
+ ri\":geo:45.755069,21.22571300000004
+END:VEVENT
+BEGIN:VEVENT
+UID:1458@tntm.ro
+DTSTART:20261206T160000Z
+DTEND:20261206T160000Z
+DTSTAMP:20261013T104322Z
+URL:https://www.tntm.ro/programul-lunii/anna-karenina-12/
+SUMMARY:ANNA KARENINA - Sala Mare - 6 dec. 26 18:00
+DESCRIPTION:ANNA KARENINA\n\n[DKB url="https://www.eventim.ro/event/anna-ka
+ renina-teatrul-national-mihai-eminescu-22277673/" text="Cumpără bilet" t
+ itle="Cumpără bilet" type="large" style="gradient" color="red" height="1
+ 0" width="200" opennewwindow="yes" nofollow="yes"]\n\n[DKB url="https://qu
+ estionpro.eu/t/AB3u5VGZB3wa2W" text="Chestionar" title="Chestionar" type="
+ large" style="gradient" color="blue" height="10" width="200" opennewwindow
+ ="yes" nofollow="yes"]\n\n\n Regulamentul spectatorului
+ATTACH;FMTTYPE=image/jpeg:https://www.tntm.ro/wp-content/uploads/2013/04/a
+ nna-karenina-15.jpg
+CATEGORIES:+15 ani
+LOCATION:Sala Mare\, Mărăşeşti 2\, Timisoara\, 300086\, Romania
+GEO:45.756068;21.225809
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Mărăşeşti 2\, Timisoara
+ \, 300086\, Romania;X-APPLE-RADIUS=100;X-TITLE=Sala Mare:geo:45.756068,21.
+ 225809
+END:VEVENT
+END:VCALENDAR

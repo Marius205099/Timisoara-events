@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro" lang="ro">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script>
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+window.consentCallbacks = window.consentCallbacks || [];
+
+(function (cookieName) {
+    function getCookie(name) {
+        var value = '; ' + document.cookie;
+        var parts = value.split('; ' + name + '=');
+
+        if (parts.length < 2) {
+            return null;
+        }
+
+        return parts.pop().split(';').shift();
+    }
+
+    function hasCategory(consent, category) {
+        return consent
+            && Array.isArray(consent.categories)
+            && consent.categories.indexOf(category) !== -1;
+    }
+
+    var rawCookie = getCookie(cookieName);
+    var consent = null;
+
+    if (rawCookie) {
+        try {
+            consent = JSON.parse(decodeURIComponent(rawCookie));
+        } catch (e) {
+            consent = null;
+            console.warn('Invalid consent cookie', e);
+        }
+    }
+
+    var necessaryGranted = ! consent || hasCategory(consent, 'necessary');
+    var analyticsGranted = hasCategory(consent, 'analytics');
+    var marketingGranted = hasCategory(consent, 'marketing');
+
+    gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'functionality_storage': 'granted',
+        'personalization_storage': 'granted',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+    });
+
+    gtag('consent', 'update', {
+        'ad_storage': marketingGranted ? 'granted' : 'denied',
+        'ad_user_data': marketingGranted ? 'granted' : 'denied',
+        'ad_personalization': marketingGranted ? 'granted' : 'denied',
+        'analytics_storage': analyticsGranted ? 'granted' : 'denied',
+        'functionality_storage': necessaryGranted ? 'granted' : 'denied',
+        'personalization_storage': necessaryGranted ? 'granted' : 'denied',
+        'security_storage': necessaryGranted ? 'granted' : 'denied'
+    });
+})('cookiepermission_v3');
+
+window.consentCallbacks.push(function (necessaryGranted, analyticsGranted, marketingGranted) {
+    console.log('[gtm consent update]');
+
+    gtag('consent', 'update', {
+        'ad_storage': marketingGranted ? 'granted' : 'denied',
+        'ad_user_data': marketingGranted ? 'granted' : 'denied',
+        'ad_personalization': marketingGranted ? 'granted' : 'denied',
+        'analytics_storage': analyticsGranted ? 'granted' : 'denied',
+        'functionality_storage': necessaryGranted ? 'granted' : 'denied',
+        'personalization_storage': necessaryGranted ? 'granted' : 'denied',
+        'security_storage': necessaryGranted ? 'granted' : 'denied'
+    });
+});
+
+window.consentGrantedAll = function () {
+    var necessaryGranted = ! window.CookieConsent || window.CookieConsent.acceptedCategory('necessary');
+    var analyticsGranted = window.CookieConsent && window.CookieConsent.acceptedCategory('analytics');
+    var marketingGranted = window.CookieConsent && window.CookieConsent.acceptedCategory('marketing');
+
+    console.log('[consent update]', {
+        necessary: necessaryGranted,
+        analytics: analyticsGranted,
+        marketing: marketingGranted
+    });
+
+    window.consentCallbacks.forEach(function (callback) {
+        callback(necessaryGranted, analyticsGranted, marketingGranted);
+    });
+};
+dataLayer.push({"pageData":{"event":{"id":"132904","title":"Grand Demo Day 1Health: unde ideile din biotehnologie \u00eent\u00e2lnesc investitorii \u0219i industria","start_date":"2026-10-29","end_date":"2026-10-29"},"venue":{"id":"9252","name":"Academia Rom\u00e2n\u0103 - Filiala Timi\u0219oara","town":"Timi\u0219oara"},"organizer":{"id":"5597"}}}); dataLayer.push({"pageBodyCssClass":"page-event-index"}); dataLayer.push({"event":"page_view_pixel","meta_pixel_ids":"2252018304868397"}); 
+</script>
+<!-- Google Tag Manager -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS5F4V" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl+"";f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer',"GTM-NS5F4V");</script>
+<!-- End Google Tag Manager -->
+        <meta property="og:url" content="https://www.iabilet.ro/bilete-grand-demo-day-1health-viitorul-alimentelor-si-culturilor-132904/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Grand Demo Day 1Health: unde ideile din biotehnologie întâlnesc investitorii și industria" />
+<meta property="og:description" content="29 oct, ora 17:30, Academia Română - Filiala Timișoara" />
+<meta property="og:image" content="https://imgcdn3.iabilet.ro/v6zDV7_ZwrFNwstodSYYuFZTQfg=/fit-in/1200x1200/https%3A%2F%2Fstatic3.iabilet.ro%2Fimg%2Fdb%2Fevent%2F02%2F07%2F28%2F00000437245-3693.png" />
+<meta name="apple-itunes-app" content="app-id=899564929, app-argument=iabilet://mobile/event/132904" />
+<meta property="al:ios:app_name" content="iaBilet" />
+<meta property="al:ios:app_store_id" content="899564929" />
+<meta property="al:ios:url" content="iabilet://mobile/event/132904" />
+<meta property="fb:app_id" content="647691012015091" />
+<link rel="canonical" href="https://www.iabilet.ro/bilete-grand-demo-day-1health-viitorul-alimentelor-si-culturilor-132904/" />
+<link rel="stylesheet" type="text/css" href="https://static3.iabilet.ro/assets/v.1793103595/271013fc/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="https://static.iabilet.ro/include/lib-v.1793103595/jquery-blockui/jquery.blockUI.css" />
+<link rel="stylesheet" type="text/css" href="https://static.iabilet.ro/include/lib-v.1793103595/blueimp-image-gallery/css/blueimp-gallery.min.css" />
+<link rel="stylesheet" type="text/css" href="https://static.iabilet.ro/include/lib-v.1793103595/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css" />
+<link rel="stylesheet" type="text/css" href="https://static.iabilet.ro/include/site/css-v.1793103595/style.css" />
+<link rel="stylesheet" type="text/css" href="https://static3.iabilet.ro/assets/v.1793103595/93ae72ab/css/styles.css" />
+<link rel="stylesheet" type="text/css" href="https://static3.iabilet.ro/assets/v.1793103595/1820ae1/style.css" />
+<link rel="stylesheet" type="text/css" href="https://static3.iabilet.ro/assets/v.1793103595/d58ffaea/theme.css" />
+<link rel="stylesheet" type="text/css" href="https://static3.iabilet.ro/assets/v.1793103595/c7782783/language-picker.css" />
+<link rel="stylesheet" type="text/css" href="https://static3.iabilet.ro/assets/v.1793103595/9c589048/cookieConsent.css" />
+<link rel="stylesheet" type="text/css" href="https://static3.iabilet.ro/assets/v.1793103595/3a694e88/cookie-banner.css" />
+<link rel="stylesheet" type="text/css" href="https://static3.iabilet.ro/assets/v.1793103595/a5144d9c/wally-chat.css" />
+<link rel="stylesheet" type="text/css" href="https://static3.iabilet.ro/assets/v.1793103595/c2e28c49/accessibility.css" />
+<style type="text/css">
+/*<![CDATA[*/
+.event-breadcrumbs .breadcrumb {
+    margin-bottom: 0;
+    overflow-wrap: anywhere;
+}
+.event-list-container > .listing-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-right: 15px;
+}
+.event-list-container > .listing-heading > h1 {
+    min-width: 0;
+    margin: 0;
+    padding: 14px 15px 16px;
+}
+.event-list-container > .listing-introduction {
+    margin: 0 0 16px;
+    padding: 0 15px;
+    line-height: 1.6;
+}
+.listing-header .event-breadcrumbs {
+    margin-bottom: 12px;
+}
+.listing-header .listing-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.listing-header .listing-heading > h1 {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+.listing-header .listing-introduction {
+    margin: 12px 0 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.breadcrumbs-compact .breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    font-size: 12px;
+    line-height: 20px;
+}
+.breadcrumbs-compact .breadcrumb > li {
+    display: flex;
+    align-items: center;
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: 96px;
+}
+.breadcrumbs-compact .breadcrumb > li:first-child,
+.breadcrumbs-compact .breadcrumb > li + li::before {
+    flex-shrink: 0;
+}
+.breadcrumbs-compact .breadcrumb > li > a {
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.breadcrumbs-compact .breadcrumb > li:last-child {
+    display: block;
+    flex: 1 1 0;
+    max-width: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/*]]>*/
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://static.iabilet.ro/include/lib-v.1793103595/jquery.hoverIntent.minified.js"></script>
+<script type="text/javascript" src="https://static3.iabilet.ro/assets/v.1793103595/271013fc/js/bootstrap.js"></script>
+<script type="text/javascript" src="https://static.iabilet.ro/include/lib-v.1793103595/underscore-1.8.3.js"></script>
+<script type="text/javascript" src="https://static.iabilet.ro/include/lib-v.1793103595/lib-common.js"></script>
+<script type="text/javascript" src="https://static3.iabilet.ro/assets/v.1793103595/d3e52b6c/typeahead.bundle.js"></script>
+<script type="text/javascript" src="https://static.iabilet.ro/include/lib-v.1793103595/jquery-blockui/jquery.blockUI.js"></script>
+<script type="text/javascript" src="https://static3.iabilet.ro/assets/v.1793103595/528ca6c7/clipboard.min.js"></script>
+<script type="text/javascript" src="https://static.iabilet.ro/include/lib-v.1793103595/blueimp-image-gallery/js/blueimp-gallery.min.js"></script>
+<script type="text/javascript" src="https://static3.iabilet.ro/assets/v.1793103595/d7463ccd/min/moment-with-locales.min.js"></script>
+<script type="text/javascript" src="https://static.iabilet.ro/include/lib-v.1793103595/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="https://static.iabilet.ro/include/site/js-v.1793103595/common.js"></script>
+<script type="text/javascript" src="https://static.iabilet.ro/include/site/js-v.1793103595/header.js"></script>
+<script type="text/javascript" src="https://static3.iabilet.ro/assets/v.1793103595/1820ae1/orderForm.js"></script>
+<script type="text/javascript" src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async="async" defer="defer"></script>
+<script type="text/javascript" src="https://static.iabilet.ro/include/lib-v.1793103595/bc.js"></script>
+<script type="text/javascript" src="https://static3.iabilet.ro/assets/v.1793103595/651d258c/js/event.js"></script>
+<script type="text/javascript" src="https://static3.iabilet.ro/assets/v.1793103595/9c589048/cookieConsent.js"></script>
+<script type="text/javascript" src="https://static3.iabilet.ro/assets/v.1793103595/c2e28c49/accessibility.js" defer="defer"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+if (typeof(CFG) == "undefined") {  var CFG = {};} CFG.siteLanguage = "ro_RO";
+    window.__A11Y_WIDGET__ = {
+        options: {"minScale":0.5,"maxScale":2,"scaleStep":0.1,"shortcuts":{"open":["Alt+Shift+X","Ctrl+Shift+X","Meta+Shift+X"],"scale_inc":["Alt+Shift+=","Ctrl+Shift+=","Meta+Shift+=","Alt+Shift++"],"scale_dec":["Alt+Shift+-","Ctrl+Shift+-","Meta+Shift+-"],"reset":["Alt+Shift+0","Ctrl+Shift+0","Meta+Shift+0"],"underline_links":["Ctrl+Shift+L","Meta+Shift+L"],"underline_headings":["Ctrl+Shift+E","Meta+Shift+E"],"grayscale":["Ctrl+Shift+B","Meta+Shift+B"],"contrast":["Ctrl+Shift+8","Meta+Shift+8"],"invert":["Ctrl+Shift+/","Meta+Shift+/"],"motion_off":["Ctrl+Shift+K","Meta+Shift+K"],"cursor_light":["Ctrl+Shift+[","Meta+Shift+["],"cursor_dark":["Ctrl+Shift+]","Meta+Shift+]"]}},
+        cookie: { name: 'a11y_settings', domain: '' }
+    };
+/*]]>*/
+</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Event","@id":"https:\/\/www.iabilet.ro\/#event-132904","name":"Grand Demo Day 1Health: viitorul alimentelor \u0219i culturilor","url":"https:\/\/www.iabilet.ro\/bilete-grand-demo-day-1health-viitorul-alimentelor-si-culturilor-132904\/","description":"Cum ajunge o idee dezvoltat\u0103 \u00een laborator mai aproape de pia\u021b\u0103? Pe 29 octombrie 2026, \u00een Sala Academiei Rom\u00e2ne \u2013 Filiala Timi\u0219oara, echipele finaliste ale 1Health Innovation Bootcamp 2026 \u00ee\u0219i prezint\u0103 proiectele la Grand Demo Day, ziua public\u0103 de pitch a programului.","eventStatus":"https:\/\/schema.org\/EventScheduled","eventAttendanceMode":"https:\/\/schema.org\/OfflineEventAttendanceMode","startDate":"2026-10-29T17:30:00+02:00","endDate":"2026-10-29","image":"https:\/\/imgcdn3.iabilet.ro\/zZKFifFAUxh-IML0slVK_ZctL4k=\/506x716\/center\/middle\/filters:no_upscale()\/https%3A%2F%2Fstatic3.iabilet.ro%2Fimg%2Fdb%2Fevent%2F02%2F07%2F28%2F00000435743-a4e1.png","location":{"@type":"Place","@id":"https:\/\/www.iabilet.ro\/#venue-9252","name":"Academia Rom\u00e2n\u0103 - Filiala Timi\u0219oara","address":{"@type":"PostalAddress","streetAddress":"Bulevardul Mihai Viteazu 24, 300223 Timi\u0219oara, Rom\u00e2nia","addressLocality":"Timi\u0219oara","addressCountry":"RO"},"url":"https:\/\/www.iabilet.ro\/bilete-academia-romana-filiala-timisoara-venue-9252\/"},"offers":{"@type":"Offer","@id":"https:\/\/www.iabilet.ro\/#event-offer-132904-RON","url":"https:\/\/www.iabilet.ro\/bilete-grand-demo-day-1health-viitorul-alimentelor-si-culturilor-132904\/","price":"159.08","priceCurrency":"RON","availability":"https:\/\/schema.org\/InStock"}}</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"BreadcrumbList","@id":"https:\/\/www.iabilet.ro\/bilete-grand-demo-day-1health-viitorul-alimentelor-si-culturilor-132904\/#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Acas\u0103","item":"https:\/\/www.iabilet.ro\/"},{"@type":"ListItem","position":2,"name":"Timi\u0219oara","item":"https:\/\/www.iabilet.ro\/bilete-in-timisoara\/"},{"@type":"ListItem","position":3,"name":"Conferinte \u00een Timi\u0219oara","item":"https:\/\/www.iabilet.ro\/bilete-in-timisoara\/bilete-conferinte\/"},{"@type":"ListItem","position":4,"name":"Grand Demo Day 1Health: viitorul alimentelor \u0219i culturilor","item":"https:\/\/www.iabilet.ro\/bilete-grand-demo-day-1health-viitorul-alimentelor-si-culturilor-132904\/"}]}</script>
+<title>Bilete Grand Demo Day 1Health: viitorul alimentelor și culturilor - 29 oct, ora 17:30 - Academia Română - Filiala Timișoara - iaBilet.ro</title>
+    <link rel="shortcut icon" href="https://static.iabilet.ro/img/global/favico16.png" type="image/png">
+</head>
+
+<body class="is-site is-site-desktop page-event page-event-index">
+
+<div class="header-search">
+    <div class="backdrop"></div>
+    <div class="search-container">
+    <form action="/cauta/" method="get">
+        <input class="form-control" placeholder="Caută artist, trupă, locaţie" data-is-header-search="true" data-is-header-autocomplete="true" data-autocomplete-url="/site/search/autocomplete/" data-suggest-template="&lt;div class=&quot;&lt;%= entity %&gt;&quot;&gt;&lt;% if (entity == &quot;artist&quot;) { %&gt;&lt;% if (isFirstInGroup == true) { %&gt;&lt;div class=&quot;heading&quot;&gt;Artiști/Trupe&lt;/div&gt;&lt;% } %&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;div class=&quot;left&quot;&gt;&lt;% if (mainImageUrl) { %&gt;&lt;img src=&quot;&lt;%= mainImageUrl %&gt;&quot; /&gt;&lt;% } else { %&gt;&lt;div class=&quot;left&quot;&gt;&lt;/div&gt;&lt;% } %&gt;&lt;/div&gt;&lt;div class=&quot;right&quot;&gt;&lt;div class=&quot;title&quot;&gt;&lt;%= strip_tags(title) %&gt; &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;% } else if (entity == &quot;venue&quot;) { %&gt;&lt;% if (isFirstInGroup == true) { %&gt;&lt;div class=&quot;heading&quot;&gt;Locații&lt;/div&gt;&lt;% } %&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;div class=&quot;right&quot;&gt;&lt;div class=&quot;event-title&quot;&gt;&lt;%= title %&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;% } else if (entity == &quot;town&quot;) { %&gt;&lt;% if (isFirstInGroup == true) { %&gt;&lt;div class=&quot;heading&quot;&gt;Orașe&lt;/div&gt;&lt;% } %&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;div class=&quot;right&quot;&gt;&lt;div class=&quot;event-title&quot;&gt;&lt;%= title %&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;% } else if (entity == &quot;event&quot;) { %&gt;&lt;% if (isFirstInGroup == true) { %&gt;&lt;div class=&quot;heading&quot;&gt;Evenimente&lt;/div&gt;&lt;% } %&gt;&lt;div class=&quot;highlight &lt;% if (typeof promoted !== &#039;undefined&#039; &amp;&amp; promoted) { %&gt;promoted&lt;% } %&gt;&quot;&gt;&lt;% if (typeof promoted !== &#039;undefined&#039; &amp;&amp; promoted) { %&gt;&lt;span class=&quot;promoted-badge&quot;&gt;PROMOVAT&lt;/span&gt;&lt;% } %&gt;&lt;div class=&quot;left&quot;&gt;&lt;% if (mainImageUrl) { %&gt;&lt;img src=&quot;&lt;%= mainImageUrl %&gt;&quot; /&gt;&lt;% } else { %&gt;&lt;div class=&quot;left&quot;&gt;&lt;/div&gt;&lt;% } %&gt;&lt;/div&gt;&lt;div class=&quot;right&quot;&gt;&lt;div class=&quot;title&quot;&gt;&lt;%= strip_tags(title) %&gt; &lt;/div&gt;&lt;div class=&quot;when&quot;&gt;&lt;%= strip_tags(startDate) %&gt;&lt;/div&gt;&lt;div class=&quot;venue&quot;&gt;// &lt;%= strip_tags(venue) %&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;% } else if (entity == &quot;searchSite&quot;) { %&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;div class=&quot;left&quot;&gt;&lt;div class=&quot;glyphicon glyphicon-search image&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;right&quot;&gt;&lt;div class=&quot;event-title&quot;&gt;Caută: &lt;strong&gt;&lt;%= _query %&gt;&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;% } %&gt;&lt;/div&gt;" autocomplete="off" spellcheck="false" type="text" value="" name="q" id="q" />
+        <button class="btn btn-default btn-link" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+    </form>
+    </div>
+</div>
+
+<header class="global-header">
+    <div class="container container-top">
+        <a class="logo" href="/"></a>        <div class="btn-toolbar pull-right header-user-bar">
+        <div  data-hydratable-widget="3opWLxCtsvCqROkUst4i7gxP3vrClPUMDy6TF6_Fj_J28uCtylDfFqW9j209_zvQJ6bm_6YgpALyF4Ci8xIkc3DxxXk6j_KfiaILipowuShDp8EFyhph0AxLV6Wyts2dSndGkqrdPgU4DpagNYzPwVPZivxPqyjo4BVPvR2F0qkFSNrsmRP4Q-j7fAQApMDhQ7PLxoJwauBVZ9XoLd8WILLfI4dnnxWuAYDUNztSiz8Egq7BDgfdlYxr3LrMuewNsU17Yv11xMICg6nykb-pVbjinQgNwdIm8HEAWYFcFGN-Z5ITO7iw5zSAVlU4WygeNyO2EEVI8G0aL9wbcp5I0Iw6bn_2lA6MNRCuV_57sKlkGTH3yc8jcHobTRb_FOGNtm1SO4p08uozA6flrYTL2vj_SPBuHQxqm2m9uqC-ixk5tDzZ5qSLXWz3HSVg7i273-nGaDJIeaKaC_9kptDDUbiRf0h3dIz1S5Y419ks1D_qKRTfHKS2WKG9" data-hydratable-prefix="headerUserArea" class="btn-group" id="widget-319b69fc-86a7-4475-84eb-d7cb45bc69e1" data-widget-type="21dbf340a74384be6a4440972684a777b8507772">
+        <div class="user-contextual-menu dropdown">
+        <span data-toggle="dropdown">
+            Contul meu            <span class="caret"></span>
+        </span>
+
+        <ul class="dropdown-menu dropdown-menu-right"><li><a href="/auth">Intră în cont</a></li><li><a href="/account/create">Cont nou</a></li></ul>    </div>
+</div>
+<script type="text/javascript">
+/*<![CDATA[*/
+((widgetId) => {
+const widget = document.getElementById(widgetId);
+
+$(widget).on('hydratablewidgets:ready', function (event) {
+    const html = event.detail && event.detail.html;
+    if (html) {
+        const $loadedHtml = $(html);
+        $(widget).fadeOut(300, function () {
+            $(widget).html($loadedHtml.html()).fadeIn(300);
+        });
+    }
+
+    return false;
+});
+})('widget\x2D319b69fc\x2D86a7\x2D4475\x2D84eb\x2Dd7cb45bc69e1');
+/*]]>*/
+</script><div  class="language-picker user-contextual-menu dropdown" id="widget-31f6e124-e976-4f94-be5c-741f1e264036" data-widget-type="3852d531bb768c09311feb4efbf148beaf75fcb1">
+
+    <span data-toggle="dropdown"><img class="flag" src="https://static3.iabilet.ro/assets/v.1793103595/c7782783/flags/1x1/ro.svg" alt="" /> <span class="caret"></span></span>
+    <ul class="dropdown-menu dropdown-menu-right">
+    <li><a data-language="ro" href="javascript:void(0)"><img class="flag" src="https://static3.iabilet.ro/assets/v.1793103595/c7782783/flags/1x1/ro.svg" alt="" /> RO</a></li><li><a data-language="en" href="javascript:void(0)"><img class="flag" src="https://static3.iabilet.ro/assets/v.1793103595/c7782783/flags/1x1/en.svg" alt="" /> EN</a></li><li><a data-language="bg" href="javascript:void(0)"><img class="flag" src="https://static3.iabilet.ro/assets/v.1793103595/c7782783/flags/1x1/bg.svg" alt="" /> BG</a></li><li><a data-language="hu" href="javascript:void(0)"><img class="flag" src="https://static3.iabilet.ro/assets/v.1793103595/c7782783/flags/1x1/hu.svg" alt="" /> HU</a></li><li><a data-language="uk" href="javascript:void(0)"><img class="flag" src="https://static3.iabilet.ro/assets/v.1793103595/c7782783/flags/1x1/ua.svg" alt="" /> UA</a></li>    </ul>
+</div>
+
+<script type="text/javascript">
+/*<![CDATA[*/
+((selector, langParam, setLangUrl) => {
+document.querySelector(selector).addEventListener('click', function (e) {
+    var target = e.target.closest('[data-language]');
+    if (! target || ! this.contains(target)) {
+        return;
+    }
+    e.preventDefault();
+
+    fetch(setLangUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+            "X-Requested-With": "fetch"
+        },
+        body: new URLSearchParams({ lang: target.getAttribute('data-language') }).toString(),
+    }).then(function () {
+        var url = new window.URL(window.location.href);
+        url.searchParams.delete(langParam);
+        window.location.href = url.toString();
+    });
+});
+})('\x23widget\x2D31f6e124\x2De976\x2D4f94\x2Dbe5c\x2D741f1e264036', '_lang', '\x2Fpreferences\x2FsetLang\x2F');
+/*]]>*/
+</script>        </div>
+    </div>
+
+    <!-- top b@nn3r -->
+    <div class="bxX6Rrew5E" id="bxX6Rrew5E"></div>
+    <!-- /top b@nn3r -->
+
+    <div class="navbar">
+        <div class="container">
+            <div class="container-navbar">
+                <ul class="nav navbar-nav">
+                                                             
+                    <li class="event-category">
+                        <div class="user-contextual-menu menu-location dropdown">
+                            <a class="toggle" href="javascript:void(0)">
+                                <span class="glyphicon glyphicon-map-marker"></span>
+                                <span class="country">RO</span><span class="city">Timișoara</span>                                <span class="caret"></span>
+                            </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-left">
+                                <div>
+                                    <div>
+                                        <div class="dropdown-cat">
+                                            2703 evenimente din 157 orașe                                        </div>
+                                        <ul class="dropdown-columns columns-3">
+                                            <li><a href="/site/index/index"><strong>Toate</strong></a></li>
+                                                                                                                                    <li><a href="/bilete-in-bucuresti/">București</a></li>
+                                                                                        <li><a href="/bilete-in-alba-iulia/">Alba Iulia</a></li>
+                                                                                        <li><a href="/bilete-in-alexandria/">Alexandria</a></li>
+                                                                                        <li><a href="/bilete-in-arad/">Arad</a></li>
+                                                                                        <li><a href="/bilete-in-bacau/">Bacău</a></li>
+                                                                                        <li><a href="/bilete-in-baia-mare/">Baia Mare</a></li>
+                                                                                        <li><a href="/bilete-in-baicoi/">Băicoi</a></li>
+                                                                                        <li><a href="/bilete-in-bals-olt/">Balș</a></li>
+                                                                                        <li><a href="/bilete-in-barlad/">Bârlad</a></li>
+                                                                                        <li><a href="/bilete-in-beius/">Beiuș</a></li>
+                                                                                        <li><a href="/bilete-in-bistrita/">Bistrița</a></li>
+                                                                                        <li><a href="/bilete-in-bolintin-deal/">Bolintin-Deal</a></li>
+                                                                                        <li><a href="/bilete-in-bontida/">Bonțida</a></li>
+                                                                                        <li><a href="/bilete-in-botosani/">Botoșani</a></li>
+                                                                                        <li><a href="/bilete-in-braila/">Brăila</a></li>
+                                                                                        <li><a href="/bilete-in-brasov/">Brașov</a></li>
+                                                                                        <li><a href="/bilete-in-breb/">Breb</a></li>
+                                                                                        <li><a href="/bilete-in-brezoi/">Brezoi</a></li>
+                                                                                        <li><a href="/bilete-in-buftea/">Buftea</a></li>
+                                                                                        <li><a href="/bilete-in-busteni-prahova/">Bușteni</a></li>
+                                                                                        <li><a href="/bilete-in-buzau/">Buzău</a></li>
+                                                                                        <li><a href="/bilete-in-calarasi/">Călărași</a></li>
+                                                                                        <li><a href="/bilete-in-campina/">Câmpina</a></li>
+                                                                                        <li><a href="/bilete-in-campulung/">Câmpulung</a></li>
+                                                                                        <li><a href="/bilete-in-campulung-moldovenesc/">Câmpulung Moldovenesc</a></li>
+                                                                                        <li><a href="/bilete-in-caracal/">Caracal</a></li>
+                                                                                        <li><a href="/bilete-in-caransebes/">Caransebeș</a></li>
+                                                                                        <li><a href="/bilete-in-carligele/">Cârligele</a></li>
+                                                                                        <li><a href="/bilete-in-cehu-silvaniei/">Cehu Silvaniei</a></li>
+                                                                                        <li><a href="/bilete-in-cernavoda/">Cernavodă</a></li>
+                                                                                        <li><a href="/bilete-in-chiajna/">Chiajna</a></li>
+                                                                                        <li><a href="/bilete-in-chiscani/">Chișcani</a></li>
+                                                                                        <li><a href="/bilete-in-cisnadie/">Cisnădie</a></li>
+                                                                                        <li><a href="/bilete-in-cluj-napoca/">Cluj-Napoca</a></li>
+                                                                                        <li><a href="/bilete-in-codlea/">Codlea</a></li>
+                                                                                        <li><a href="/bilete-in-constanta/">Constanța</a></li>
+                                                                                        <li><a href="/bilete-in-corabia/">Corabia</a></li>
+                                                                                        <li><a href="/bilete-in-corbu-harghita/">Corbu</a></li>
+                                                                                        <li><a href="/bilete-in-costinesti-constanta/">Costinești</a></li>
+                                                                                        <li><a href="/bilete-in-covasna-covasna/">Covasna</a></li>
+                                                                                        <li><a href="/bilete-in-craiova/">Craiova</a></li>
+                                                                                        <li><a href="/bilete-in-curtea-de-arges/">Curtea de Argeș</a></li>
+                                                                                        <li><a href="/bilete-in-darmanesti-bacau/">Dărmănești</a></li>
+                                                                                        <li><a href="/bilete-in-deal/">Deal</a></li>
+                                                                                        <li><a href="/bilete-in-dej/">Dej</a></li>
+                                                                                        <li><a href="/bilete-in-deva/">Deva</a></li>
+                                                                                        <li><a href="/bilete-in-dorohoi/">Dorohoi</a></li>
+                                                                                        <li><a href="/bilete-in-drobeta-turnu-severin/">Drobeta-Turnu Severin</a></li>
+                                                                                        <li><a href="/bilete-in-dumbraveni-sibiu/">Dumbrăveni</a></li>
+                                                                                        <li><a href="/bilete-in-eforie-nord/">Eforie Nord</a></li>
+                                                                                        <li><a href="/bilete-in-fagaras/">Făgăraș</a></li>
+                                                                                        <li><a href="/bilete-in-feleacu/">Feleacu</a></li>
+                                                                                        <li><a href="/bilete-in-floresti-cluj/">Florești</a></li>
+                                                                                        <li><a href="/bilete-in-focsani/">Focșani</a></li>
+                                                                                        <li><a href="/bilete-in-fundulea/">Fundulea</a></li>
+                                                                                        <li><a href="/bilete-in-gaesti/">Găești</a></li>
+                                                                                        <li><a href="/bilete-in-galati/">Galați</a></li>
+                                                                                        <li><a href="/bilete-in-ghimbav/">Ghimbav</a></li>
+                                                                                        <li><a href="/bilete-in-giurgiu/">Giurgiu</a></li>
+                                                                                        <li><a href="/bilete-in-greci-tulcea/">Greci</a></li>
+                                                                                        <li><a href="/bilete-in-gura-humorului/">Gura Humorului</a></li>
+                                                                                        <li><a href="/bilete-in-hunedoara/">Hunedoara</a></li>
+                                                                                        <li><a href="/bilete-in-husi-vaslui/">Huși</a></li>
+                                                                                        <li><a href="/bilete-in-iasi/">Iași</a></li>
+                                                                                        <li><a href="/bilete-in-independenta-galati/">Independența</a></li>
+                                                                                        <li><a href="/bilete-in-insuratei-braila/">Însurăței</a></li>
+                                                                                        <li><a href="/bilete-in-ludus/">Luduș</a></li>
+                                                                                        <li><a href="/bilete-in-lugoj/">Lugoj</a></li>
+                                                                                        <li><a href="/bilete-in-magurele-ilfov/">Măgurele</a></li>
+                                                                                        <li><a href="/bilete-in-mamaia/">Mamaia</a></li>
+                                                                                        <li><a href="/bilete-in-medgidia/">Medgidia</a></li>
+                                                                                        <li><a href="/bilete-in-medias/">Mediaș</a></li>
+                                                                                        <li><a href="/bilete-in-merisani-arges/">Merișani</a></li>
+                                                                                        <li><a href="/bilete-in-miercurea-ciuc/">Miercurea Ciuc</a></li>
+                                                                                        <li><a href="/bilete-in-mioveni/">Mioveni</a></li>
+                                                                                        <li><a href="/bilete-in-mogosoaia/">Mogoșoaia</a></li>
+                                                                                        <li><a href="/bilete-in-moinesti/">Moinești</a></li>
+                                                                                        <li><a href="/bilete-in-moreni-dambovita/">Moreni</a></li>
+                                                                                        <li><a href="/bilete-in-murani/">Murani</a></li>
+                                                                                        <li><a href="/bilete-in-navodari-constanta/">Năvodari</a></li>
+                                                                                        <li><a href="/bilete-in-negresti-oas/">Negrești-Oaș</a></li>
+                                                                                        <li><a href="/bilete-in-onesti-bacau/">Onești</a></li>
+                                                                                        <li><a href="/bilete-in-oradea/">Oradea</a></li>
+                                                                                        <li><a href="/bilete-in-ostratu/">Ostratu</a></li>
+                                                                                        <li><a href="/bilete-in-petrosani-hunedoara/">Petroșani</a></li>
+                                                                                        <li><a href="/bilete-in-piatra-neamt/">Piatra-Neamț</a></li>
+                                                                                        <li><a href="/bilete-in-pitesti/">Pitești</a></li>
+                                                                                        <li><a href="/bilete-in-ploiesti/">Ploiești</a></li>
+                                                                                        <li><a href="/bilete-in-popesti-leordeni/">Popești Leordeni</a></li>
+                                                                                        <li><a href="/bilete-in-pucioasa/">Pucioasa</a></li>
+                                                                                        <li><a href="/bilete-in-radauti/">Rădăuți</a></li>
+                                                                                        <li><a href="/bilete-in-ramnicu-sarat/">Râmnicu Sărat</a></li>
+                                                                                        <li><a href="/bilete-in-ramnicu-valcea/">Râmnicu Vâlcea</a></li>
+                                                                                        <li><a href="/bilete-in-reghin/">Reghin</a></li>
+                                                                                        <li><a href="/bilete-in-resita/">Reșița</a></li>
+                                                                                        <li><a href="/bilete-in-salasu-de-sus/">Sălașu de Sus</a></li>
+                                                                                        <li><a href="/bilete-in-sambata-de-sus/">Sâmbăta de Sus</a></li>
+                                                                                        <li><a href="/bilete-in-santana-de-mures/">Sântana de Mureș</a></li>
+                                                                                        <li><a href="/bilete-in-satu-mare/">Satu Mare</a></li>
+                                                                                        <li><a href="/bilete-in-sebes-alba/">Sebeș</a></li>
+                                                                                        <li><a href="/bilete-in-sfantu-gheorghe/">Sfântu Gheorghe</a></li>
+                                                                                        <li><a href="/bilete-in-sibiel/">Sibiel</a></li>
+                                                                                        <li><a href="/bilete-in-sibiu/">Sibiu</a></li>
+                                                                                        <li><a href="/bilete-in-sighisoara/">Sighișoara</a></li>
+                                                                                        <li><a href="/bilete-in-simeria/">Simeria</a></li>
+                                                                                        <li><a href="/bilete-in-sinaia/">Sinaia</a></li>
+                                                                                        <li><a href="/bilete-in-slatina/">Slatina</a></li>
+                                                                                        <li><a href="/bilete-in-slobozia/">Slobozia</a></li>
+                                                                                        <li><a href="/bilete-in-snagov/">Snagov</a></li>
+                                                                                        <li><a href="/bilete-in-suceava/">Suceava</a></li>
+                                                                                        <li><a href="/bilete-in-targoviste/">Târgoviște</a></li>
+                                                                                        <li><a href="/bilete-in-targsoru-vechi/">Târgșoru Vechi</a></li>
+                                                                                        <li><a href="/bilete-in-targu-jiu/">Târgu Jiu</a></li>
+                                                                                        <li><a href="/bilete-in-targu-mures/">Târgu Mureș</a></li>
+                                                                                        <li><a href="/bilete-in-tarnaveni/">Târnăveni</a></li>
+                                                                                        <li><a href="/bilete-in-tecuci-galati/">Tecuci</a></li>
+                                                                                        <li><a href="/bilete-in-timisoara/">Timișoara</a></li>
+                                                                                        <li><a href="/bilete-in-toplita-harghita/">Toplița</a></li>
+                                                                                        <li><a href="/bilete-in-tulcea/">Tulcea</a></li>
+                                                                                        <li><a href="/bilete-in-turda-cluj/">Turda</a></li>
+                                                                                        <li><a href="/bilete-in-urziceni-ialomita/">Urziceni</a></li>
+                                                                                        <li><a href="/bilete-in-vadu-oii-buzau/">Vadu Oii</a></li>
+                                                                                        <li><a href="/bilete-in-valea-danului/">Valea Danului</a></li>
+                                                                                        <li><a href="/bilete-in-valenii-de-munte/">Vălenii de Munte</a></li>
+                                                                                        <li><a href="/bilete-in-vaslui/">Vaslui</a></li>
+                                                                                        <li><a href="/bilete-in-vatra-dornei/">Vatra Dornei</a></li>
+                                                                                        <li><a href="/bilete-in-vernesti-buzau/">Vernești</a></li>
+                                                                                        <li><a href="/bilete-in-viseu-de-sus/">Vișeu de Sus</a></li>
+                                                                                        <li><a href="/bilete-in-voluntari/">Voluntari</a></li>
+                                                                                        <li><a href="/bilete-in-zahanaua/">Zahanaua</a></li>
+                                                                                        <li><a href="/bilete-in-zalau/">Zalău</a></li>
+                                                                                    </ul>
+                                    </div>
+                                    <div>
+                                        <div class="dropdown-cat">Internațional</div>
+                                        <ul class="dropdown-columns">
+                                                                                                                                    <li><a href="/bilete-in-austria/">Austria</a></li>
+                                                                                        <li><a href="/bilete-in-belgia/">Belgia</a></li>
+                                                                                        <li><a href="/bilete-in-bulgaria/">Bulgaria</a></li>
+                                                                                        <li><a href="/bilete-in-cehia/">Cehia</a></li>
+                                                                                        <li><a href="/bilete-in-cipru/">Cipru</a></li>
+                                                                                        <li><a href="/bilete-in-croatia/">Croația</a></li>
+                                                                                        <li><a href="/bilete-in-danemarca/">Danemarca</a></li>
+                                                                                        <li><a href="/bilete-in-elvetia/">Elveția</a></li>
+                                                                                        <li><a href="/bilete-in-franta/">Franța</a></li>
+                                                                                        <li><a href="/bilete-in-germania/">Germania</a></li>
+                                                                                        <li><a href="/bilete-in-irlanda/">Irlanda</a></li>
+                                                                                        <li><a href="/bilete-in-israel/">Israel</a></li>
+                                                                                        <li><a href="/bilete-in-italia/">Italia</a></li>
+                                                                                        <li><a href="/bilete-in-letonia/">Letonia</a></li>
+                                                                                        <li><a href="/bilete-in-lituania/">Lituania</a></li>
+                                                                                        <li><a href="/bilete-in-luxemburg/">Luxemburg</a></li>
+                                                                                        <li><a href="/bilete-in-marea-britanie/">Marea Britanie</a></li>
+                                                                                        <li><a href="/bilete-in-moldova/">Moldova</a></li>
+                                                                                        <li><a href="/bilete-in-norvegia/">Norvegia</a></li>
+                                                                                        <li><a href="/bilete-in-olanda/">Olanda</a></li>
+                                                                                        <li><a href="/bilete-in-polonia/">Polonia</a></li>
+                                                                                        <li><a href="/bilete-in-portugalia/">Portugalia</a></li>
+                                                                                        <li><a href="/bilete-in-slovacia/">Slovacia</a></li>
+                                                                                        <li><a href="/bilete-in-slovenia/">Slovenia</a></li>
+                                                                                        <li><a href="/bilete-in-spania/">Spania</a></li>
+                                                                                    </ul>
+                                    </div>
+                                </div>
+                            </div>
+                                                    </div>
+                    </li>
+
+                                                    <li class="event-category ">
+                                    <div class="user-contextual-menu dropdown">
+                                                                                <a class="toggle" href="">
+                                            <span>Stil</span>
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-left">
+                                                                                    <li><a href="/bilete-in-timisoara/bilete-concerte-rock/">Rock</a></li>
+                                                                                    <li><a href="/bilete-in-timisoara/bilete-concerte-pop/">Pop</a></li>
+                                                                                    <li><a href="/bilete-in-timisoara/bilete-concerte-metal/">Metal</a></li>
+                                                                                    <li><a href="/bilete-in-timisoara/bilete-concerte-electro/">Electronica</a></li>
+                                                                                    <li><a href="/bilete-in-timisoara/bilete-concerte-hip-hop/">Hip Hop</a></li>
+                                                                                    <li><a href="/bilete-in-timisoara/bilete-festivaluri/">Festivaluri</a></li>
+                                                                                    <li><a href="/bilete-in-timisoara/bilete-concerte-muzica-clasica/">Clasica</a></li>
+                                                                                    <li><a href="/bilete-in-timisoara/bilete-concerte-pop-rock/">Pop Rock</a></li>
+                                                                                    <li><a href="/bilete-in-timisoara/bilete-concerte-jazz/">Jazz</a></li>
+                                                                                    <li><a href="/bilete-in-timisoara/bilete-concerte/"><strong>Toate</strong></a></li>
+                                                                                </ul>
+
+                                        
+                                    </div>
+                                </li>
+                                                            <li class="event-category  light">
+                                    <div class="user-contextual-menu dropdown">
+                                                                                <a class="toggle" href="/bilete-in-timisoara/bilete-teatru/">
+                                            <span>Teatru</span>
+                                        </a>
+                                        
+                                    </div>
+                                </li>
+                                                            <li class="event-category  light">
+                                    <div class="user-contextual-menu dropdown">
+                                                                                <a class="toggle" href="/bilete-in-timisoara/bilete-stand-up-comedy/">
+                                            <span>Stand-up comedy</span>
+                                        </a>
+                                        
+                                    </div>
+                                </li>
+                                                            <li class="event-category  light">
+                                    <div class="user-contextual-menu dropdown">
+                                                                                <a class="toggle" href="/bilete-in-timisoara/bilete-spectacole-pentru-copii/">
+                                            <span>Spectacole pentru copii</span>
+                                        </a>
+                                        
+                                    </div>
+                                </li>
+                                                            <li class="event-category  light">
+                                    <div class="user-contextual-menu dropdown">
+                                                                                <a class="toggle" href="/bilete-voucher-cadou-iabilet-87881/">
+                                            <span>Vouchere cadou</span>
+                                        </a>
+                                        
+                                    </div>
+                                </li>
+                                                            <li class="event-category  light">
+                                    <div class="user-contextual-menu dropdown">
+                                                                                <a class="toggle" href="https://www.iabilet.ro/servicii">
+                                            <span>Servicii</span>
+                                        </a>
+                                        
+                                    </div>
+                                </li>
+                                            </ul>
+                                <ul class="nav navbar-right">
+                    <li>
+                        <a class="header-calendar-launcher " data-purpose="header-calendar-launcher" data-day-url-template="/bilete/__year__/__month__/__day__/" data-month-url-template="/bilete/__year__/__month__/" data-month-label-template="Vezi tot &lt;%= monthYear %&gt;" href="javascript:void(0)"><span class="glyphicon glyphicon-calendar"></span></a>                    </li>
+                </ul>
+
+                                <div class="header-calendar" data-purpose="data-selector-container">
+                    <div class="day-selector" data-purpose="day-selector-container"></div>
+                    <a href="javascript:void(0)" class="btn btn-primary btn-xs btn-block" data-purpose="month-link"></a>
+                </div>
+                            </div>
+        </div>
+    </div>
+</header>
+
+
+<section class="global-container">
+<div class="event-page container has-poster">
+        <div class="main-content">
+            <nav class="event-breadcrumbs" aria-label="Navigare">
+    <ol class="breadcrumb">
+                    <li>
+                                    <a aria-label="Acasă" title="Acasă" href="https://www.iabilet.ro/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>                            </li>
+                    <li>
+                                    <a href="https://www.iabilet.ro/bilete-in-timisoara/">Timișoara</a>                            </li>
+                    <li>
+                                    <a href="https://www.iabilet.ro/bilete-in-timisoara/bilete-conferinte/">Conferinte în Timișoara</a>                            </li>
+                    <li aria-current="page">
+                                    Grand Demo Day 1Health: viitorul alimentelor și culturilor                            </li>
+            </ol>
+</nav>
+
+            
+            <div class="row">
+
+                                <div class="col-xs-4 poster-image-container">
+                    <a href="javascript:void(0)" class="poster-image">
+                        <img src="https://imgcdn3.iabilet.ro/zZKFifFAUxh-IML0slVK_ZctL4k=/506x716/center/middle/filters:no_upscale()/https%3A%2F%2Fstatic3.iabilet.ro%2Fimg%2Fdb%2Fevent%2F02%2F07%2F28%2F00000435743-a4e1.png"/>
+                    </a>
+                    <div class="fb-page-plugin"><a href="https://www.facebook.com/iaBilet/" target="_blank" class="btn btn-default" style="display: block; text-align: center; padding: 10px; background-color: #e4e6eb; color: #050505; text-decoration: none; border: none;"><i class="fa fa-facebook-square" style="color: #4267B2; margin-right: 8px; font-size: 18px;"></i>Follow iaBilet.ro</a></div>                </div>
+                
+                <div class="col-xs-7">
+                    <div class="header-text">
+                                                <h1>Grand Demo Day 1Health: viitorul alimentelor și culturilor</h1>
+                    </div>
+
+                    <div class="location">
+                        <a href="/bilete-academia-romana-filiala-timisoara-venue-9252/"><span>Academia Română - Filiala Timișoara</span></a>                        <br /><span>Bulevardul Mihai Viteazu 24, 300223 Timișoara, România</span>                    </div>
+
+                                                            <div class="date">
+                        joi, 29 octombrie, ora 17:30                                                <meta content="2026-10-29">
+                    </div>
+                    
+                    <div class="likable-event-container">
+                        
+                        <div class="event-favorite-button-wrapper"><button type="button" class="event-favorite-button event-favorite-button--locked" data-favorite-button="1" data-url="/userEventFavorite/toggle/" data-event-id="132904" data-is-favorite="0" data-label-add="Adaugă la favorite" data-label-remove="Șterge din favorite" data-csrf-name="iblt_csrf" data-csrf-value="cGdoQ2xxczl1NDQ5SDhuY2RKTUdoSjFwMGFSTW5TMWGDMfGjuCPJjVgQpRJTcj5o1A-bKrOAX6r00TgviBL_Kw==" title="Adaugă la favorite" aria-label="Adaugă la favorite" aria-pressed="false" data-redirect-url="https://elite.iabilet.ro" data-has-favorite-perk="0"><span class="glyphicon glyphicon-heart-empty event-favorite-button__icon" aria-hidden="true"></span><span class="event-favorite-button__label sr-only">Adaugă la favorite</span></button><a target="_blank" rel="noopener" class="event-favorite-button__badge-link" href="https://elite.iabilet.ro"><img src="https://static.iabilet.ro/img/global/elite/badge.png" alt="iaBilet Elite Badge" class="badge-elite event-favorite-button__badge" /></a><span class="event-favorite-feedback" data-favorite-feedback=""></span></div>                    </div>
+
+                    
+
+                                        <div class="tab-content">
+                        <div id="details" class="tab-pane active" data-role="tabs" style="padding-top: 12px;">
+                            <div class="short-desc">
+                                Cum ajunge o idee dezvoltată în laborator mai aproape de piață? Pe 29 octombrie 2026, în Sala Academiei Române – Filiala Timișoara, echipele finaliste ale 1Health Innovation Bootcamp 2026 își prezintă proiectele la Grand Demo Day, ziua publică de pitch a programului.                                                                <span class="read-more">
+                                    <a href="javascript:void(0)" class="event-detail-toggle">Mai multe detalii</a>
+                                </span>
+                                                            </div>
+
+                                                        <div class="event-detail" style="display:none;">
+                                <div><p>Tema ediției 2026 este <strong>„Viitorul alimentelor și culturilor”</strong>. După săptămâni de lucru cu mentori BioMentorHub și experți din industrie, finaliștii din mai multe orașe urcă pe scenă cu soluții de-a lungul lanțului agroalimentar:</p>
+<p dir="ltr">•    <strong>Dyonis</strong>: granule care rețin apa și ajută culturile să reziste în perioadele de secetă, Cluj-Napoca</p>
+<p dir="ltr">•   <strong>Tailored Treats</strong>: deserturi low in sugar &amp; protein și bogate în fibre, în special pentru persoanele cu boli metabolice rare ce trebuie să urmeze o dietă strictă, Timișoara</p>
+<p dir="ltr">•     <strong>Fiora Pack</strong>: ambalaje biodegradabile obținute din deșeuri alimentare, Chișinău</p>
+<p dir="ltr">•    <strong> Zorian</strong>: uleiuri presate la rece, cu o tehnologie nouă de încapsulare, Iași </p>
+<p dir="ltr">•    <strong> Terra Apis</strong>: produse apicole pentru îngrijirea și sănătatea intimă feminină, Timișoara</p>
+<p dir="ltr">„<em>Echipele au lucrat săptămâni întregi cu mentori internaționali, iar pe 29 octombrie își vor prezenta rezultatele celor care le vor putea susține dezvoltarea: parteneri pentru proiecte-pilot, clienți și investitori. Vă așteptăm la Timișoara!”</em>, a transmis Dr. Michael-Bogdan Mărgineanu, fondator și președinte BioMentorHub.</p>
+<p dir="ltr">Programul este susținut de Ahold Delhaize Romania (Profi-Mega Image-Shop&amp;Go), Bayer, FrescoVerde, Agroland. <br />Parteneri strategici: Universitatea de Științele Vieții “Regele Mihai I” din Timișoara, Centrul Cultural Plai. </p>
+<p dir="ltr"><br /><strong>Locurile sunt limitate</strong>. Cumpără biletul și vino pe 29 octombrie să vezi ce proiecte agroalimentare caută acum partenerii și investitorii.</p>
+<p dir="ltr">•⁠ cupon reducere 50% pentru studenți în urma trimiterii unui act doveditor pe adresa de email: <a href="/cdn-cgi/l/email-protection#d8b1b4b1b6bbb998bab1b7b5bdb6acb7aab0adbaf6aab7"><span class="__cf_email__" data-cfemail="b2dbdedbdcd1d3f2d0dbdddfd7dcc6ddc0dac7d09cc0dd">[email&#160;protected]</span></a> <br />•⁠ ⁠toate biletele nclud accesul la Grand Demo Day, recepția de networking &amp; gustări</p>
+<p dir="ltr"><strong>Data și ora</strong>: 29 octombrie 2026, ora 17:30</p>
+<p dir="ltr"><strong>Locația:</strong> Sala Academiei Române – Filiala Timișoara</p>
+<p dir="ltr"><strong>Programul și alte detali</strong>i: le primești pe email, după achiziționarea biletului.</p></div>                            </div>
+                            <span class="read-more" style="display:none;">
+                                <a hfacref="javascript:void(0)" class="event-detail-toggle"><span class="glyphicon glyphicon-chevron-up"></span> Ascunde detaliile</a>
+                            </span>
+                                                    </div>
+
+                        
+                                            </div>
+                </div>
+            </div>
+
+            <div class="social-share">
+    <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fiabilet.ro%2Fgo%2FebvgPMli%2F" target="_blank" rel="nofollow" class="share-facebook"></a>
+    <a href="https://x.com/intent/tweet?text=Grand+Demo+Day+1Health%3A+unde+ideile+din+biotehnologie+%C3%AEnt%C3%A2lnesc+investitorii+%C8%99i+industria+https%3A%2F%2Fiabilet.ro%2Fgo%2FebvgPMli%2F" target="_blank" rel="nofollow" class="share-twitter"></a>
+    <a href="" target="_blank" rel="nofollow" class="share-instagram"></a>
+    <a onclick="return false;" data-toggle="tooltip" data-placement="left" class="share-link" title="Copy to clipboard" data-clipboard-text="https://iabilet.ro/go/ebvgPMli/" rel="nofollow" href="https://iabilet.ro/go/ebvgPMli/"></a></div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 order-form-container">
+                <div class="inner">
+                <link rel="stylesheet" type="text/css" href="https://static3.iabilet.ro/assets/v.1793103595/17659e93/style.css" /><div class="order-form-header">
+    <ul class="nav nav-tabs">
+        <li class="active"><a>Comandă bilete</a></li>
+        
+            </ul>
+</div>
+<div  data-is-order-form-widget="true" class="order-form-widget can-book" data-messages="{&quot;cookiesRequired&quot;:&quot;iaBilet.ro folose\u0219te cookie-uri pentru a func\u021biona. Te rug\u0103m s\u0103 verifici c\u0103 ai activate cookie-urile \u0219i s\u0103 \u00eencerci din nou.&quot;,&quot;csrfUpdateFailed&quot;:&quot;A ap\u0103rut o problem\u0103 de comunicare. Re\u00eencarc\u0103 pagina \u0219i \u00eencearc\u0103 din nou.&quot;}" data-return-url="https://www.iabilet.ro/bilete-grand-demo-day-1health-viitorul-alimentelor-si-culturilor-132904/" data-is-embed="">
+   
+    <div class="order-form">
+<form id="orderForm" target="_top" data-is-order-form="true" data-csrf-name="iblt_csrf" data-csrf-url="/csrf/" data-disable-submit="0" data-ajax-event-namespace="26ad6c1fb3336d6a4fe1e45e1cb4a617" action="https://www.iabilet.ro/widgetOrderForm/bookEvent/" method="post"><div style="display:none"><input type="hidden" value="1" name="yform_orderForm" id="yform_orderForm" /></div>
+<input type="hidden" value="MCAnQRYmBfn5w_WkAcX7BirsQ4eOgNxDTMFuFap3M4q7IVjYK_Wtn1u75pHIdT4hxflAfW3OZDYILdS0NC5alymedYFo63SfFg1fvt9AhdI5L1Pr6yXU3mWACiHS2qRcBcloHwRsTbEP5krH1X8_yHaIlRnN3Bs1mmz3PAfJc3kuvDXZ4QFZc_TTMdagkuaIykA-36Hma3QJFvGgiSADuy9iisnfHMZiSdlFCDRD6WsQ87WxsCW4AVCwghrE8VTloXhOEb4kwwhiCV0W8l8JtRYNcXwo0lhONfAM76k-mquPUsBkVXnfmK7paEDzsqNBV_s5FZVJxk1d5vZRRKmYNcbRSMzSPJ9GcrTp7cyhnkj4TPmufhW6Wp627nj6JoXMV77_rwczl2HK9Yf4DoTvl1ZUXZBQaJLsk9ndQ7h0vuBB2htg3SdkAmW3GZ9QfwRWs2hYPxRi27DleJ3M4mfD5uyj7JlmeMXtMbPEqQlktUyD3jbTLX6WDQ2NXKu-VrJpj--6vKrOjv5UNVe5IVKj4c0hublqjluhhxE8AvcU9VMwx4ly-AfG39jkMwFNIBbBeJzS3DE76Gv8PNERTMuEpQbHENtmkJ2o5tLVvwlNPVMYRSNS3kCZS5hyHE9DPf05skJ7SwCsg363xrKPF6IEG-xZBXBoexr5tEEHqnbgj5vTObJemhc6hiXQwiqLvFZM-j6_GoalxKIkKpuLh_gFO4FtZqztZouja7kuhLlXRAlQZ3x8ejeYdvcNiMj44anmS0UJNdtYgyhCWaZHYjB5l1Jl26IWs7ZTYi1NWP33zkb38mPAyxVRdUxcsYHBa_WY2Eg32uN8dT83gp3fIQEpYKYBcpZDpkRZRIAgp0j2ggHn8e_Q1J1wCQNkytRfdyAPnj-O7bYcn_5AakLDPQ.." name="widgetInit" id="widgetInit" /><div class="form-zone">
+    </div>
+
+<div class="table-flex form-zone">
+    <div data-is-tariffs-container="1">
+    <div  data-is-tariff="1" data-tariff-id="358574" data-tariff-name="Acces general" data-tariff-sell-price="159.08" data-tariff-sell-currency="RON" class="table-flex-row is-tariff" style="--category-color: #006aca;">
+    <div class="ticket-categ">
+        <span class="bullet category-color"></span>
+        <div class="ticket-info">
+            <span>Acces general</span>        </div>
+    </div>
+
+    <div class="tariff-price ">
+        <a role="button" tabindex="0" class="popover-launcher tariff-price-amount text-nowrap" data-toggle="popover" data-placement="bottom" data-content="&lt;div&gt;Preț bilet: &lt;span class=&quot;text-nowrap&quot;&gt;150 lei&lt;/span&gt;&lt;br/&gt;Comisioane emitere bilet: &lt;span class=&quot;text-nowrap&quot;&gt;9,07 lei&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;a data-modal-html=&quot;&amp;lt;div  class=&amp;quot;modal&amp;quot; id=&amp;quot;widget-1f5027c9-4ffb-4761-ba47-c60d28f6f874&amp;quot; tabindex=&amp;quot;-1&amp;quot; role=&amp;quot;dialog&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;modal-dialog&amp;quot; role=&amp;quot;document&amp;quot;&amp;gt;
+        &amp;lt;div class=&amp;quot;modal-content&amp;quot;&amp;gt;
+                        &amp;lt;div class=&amp;quot;modal-header&amp;quot;&amp;gt;
+                                &amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;close&amp;quot; data-dismiss=&amp;quot;modal&amp;quot; aria-label=&amp;quot;Close&amp;quot;&amp;gt;&amp;lt;span aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;amp;times;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;
+                                &amp;lt;h4 class=&amp;quot;modal-title&amp;quot;&amp;gt;De ce trebuie să plătești comisioane?&amp;lt;/h4&amp;gt;            &amp;lt;/div&amp;gt;
+            
+            &amp;lt;div class=&amp;quot;modal-body&amp;quot;&amp;gt;
+                Uneori, organizatorii aleg să adauge comisionul de ticketing peste prețul biletului, astfel încât acesta să fie plătit de voi, spectatorii. Comisioanele de ticketing sau cele de operare platformă pe care le percepem ne ajută să fim mai buni, și pentru asta vă mulțumim! iaBilet.ro înseamnă, de peste zece ani, munca zilnică a zeci de colegi pasionați, dedicată oferirii unor servicii de calitate. Investim pentru a vă oferi software disponibil non-stop, multiple metode de plată, client service de calitate disponibil 7 zile pe săptămână, dezvoltări noi și tool-uri care vă fac viața mai ușoară etc. Suportăm costurile serverelor, salariile programatorilor, contabililor, avocaților, juriștilor și multe altele. Costurile colosale sunt necesare pentru a susține o companie care oferă mii de evenimente, simultan, în fiecare zi. Vă mulțumim!            &amp;lt;/div&amp;gt;
+
+                        &amp;lt;div class=&amp;quot;modal-footer&amp;quot;&amp;gt;
+                &amp;lt;button class=&amp;quot;btn btn-default&amp;quot; data-dismiss=&amp;quot;modal&amp;quot; name=&amp;quot;yt0&amp;quot; type=&amp;quot;button&amp;quot;&amp;gt;Închide&amp;lt;/button&amp;gt;            &amp;lt;/div&amp;gt;
+                    &amp;lt;/div&amp;gt;
+            &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&quot; onclick=&quot;this.dataset.modalHtml &amp;amp;&amp;amp; jQuery(this.dataset.modalHtml).modal(); return false;&quot; class=&quot;popover-launcher&quot; href=&quot;#&quot;&gt;De ce trebuie să plătești comisioane?&lt;/a&gt;&lt;/div&gt;" data-trigger="focus" data-html="true">159<sup>08</sup> lei</a>    </div>
+
+        <div class="ticket-quantity form-inline">
+        <input value="358574" data-selection-group-key="358574_163822" data-selection-group-purpose="tariffId" name="BookingHandler[tariff][358574_163822][tariffId]" id="BookingHandler_tariff_358574_163822_tariffId" type="hidden" /><input value="SEAT_CATEGORY_226492" data-selection-group-key="358574_163822" data-selection-group-purpose="areaCode" name="BookingHandler[tariff][358574_163822][areaCode]" id="BookingHandler_tariff_358574_163822_areaCode" type="hidden" />            <div class="input-group is-input-container">
+                <a
+                    href="javascript:void(0)"
+                    class="btn btn-primary ticket-nr-modifier minus input-group-btn"
+                    data-purpose="ticket-nr-modifier"
+                    data-direction="minus"
+                    data-disable-message=""
+                                    ><span></span></a>
+
+                <input id="input_358574_163822_150_358574" data-tariff-price="159.08" data-tariff-id="358574" data-min-nr-tickets="1" data-max-nr-tickets="20" data-increment="1" data-is-ticket-nr="1" class="ticket-nr" autocomplete="off" readonly="readonly" onfocus="this.blur()" data-selection-group-key="358574_163822" data-selection-group-purpose="ticketNr" name="BookingHandler[tariff][358574_163822][ticketNr]" type="tel" value="0" />
+                <a
+                    href="javascript:void(0)"
+                    class="btn btn-primary ticket-nr-modifier plus input-group-btn"
+                    data-purpose="ticket-nr-modifier"
+                    data-direction="plus"
+                    data-disable-message=""
+                                        ><span></span></a>
+            </div>
+            </div>
+
+    </div>
+    </div>
+        <div class="table-flex-row flex-wrap">
+                <div class="voucher-container">
+            <div data-is-voucher-component-container="true">
+    <div class="voucher-code-container-text" data-is-voucher-code-container="true"
+            style="display:block;">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        Dacă ai un cod de voucher, <a href="javascript:void(0)" data-is-voucher-code-toggler="true" style="white-space: nowrap">click aici</a>    </div>
+
+    <div class="voucher-code-container-form" data-is-voucher-code-container="true"
+         style="display:none;">
+                <div class="input-group">
+            <input placeholder="Cod voucher" class="form-control" name="BookingHandler[voucherCode]" id="BookingHandler_voucherCode" type="text" />            <span class="input-group-btn">
+                <button class="btn btn-primary btn-blue" data-is-voucher-check="1" type="button" name="voucherCheck">Trimite</button>                <a
+                    data-is-voucher-code-toggler="true"
+                    class="btn btn-default"
+                    href="javascript:void(0)"
+                ><span class="glyphicon glyphicon-remove"></span></a>
+            </span>
+        </div>
+    </div>
+</div>
+        </div>
+
+        
+        <div class="refund-policy-container text-right">
+            <p><span class="text-success refund-allowed"><i class="fa fa-thumbs-up"></i> Biletele sunt <a role="button" tabindex="0" class="popover-launcher" style="white-space: nowrap" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true" data-content="&lt;a target=&quot;_blank&quot; href=&quot;/terms/ro/#retur&quot;&gt;Vezi condițiile de retur&lt;/a&gt;">returnabile</a></span></p>
+
+            <p><span class="text-muted refund-denied">După plată, persoanele juridice pot solicita factura pe iabilet.ro/facturi</span></p>
+        </div>
+
+        <div class="submit-button-container">
+            <button class="btn btn-primary btn-blue" disable="disable" data-purpose="submit-button" data-is-order-form-submit="true" type="submit" name="makeBooking">Comandă bilete</button>        </div>
+    </div>
+
+</div>
+
+</form></div> <!-- /class="order-form" -->
+
+<div  class="cloudflare-turnstile-widget text-center" style="height: 0; max-height: 0; overflow: hidden; padding: 0; margin: 0;" id="widget-402b1ac4-a9ce-44b8-8ef0-25630c8b81e8" data-widget-type="cloudflare-turnstile-widget">
+    <div class="title">
+        Doar o mică verificare    </div>
+    <div id="ibTurnstile_widget-402b1ac4-a9ce-44b8-8ef0-25630c8b81e8"></div><form id="turnstile_verify_form_6ae09e5a30f04" style="display:none" action="/?widget=0DXH9AtwD6BsvpxpoKs6h5bHCSjRBL0rD5pA1e-NbkWrR7qHEzr-b5bNk13u7c1tlqIGTpHZwHs5-Ix1TxSUrVPXM-UaJIFwYXX1q0OdwhEArMHoTa7l6ug7bn5I8xuCaHfvmP0qlm_4R5awnV4rMdmSVcN61nSbSUmR9k4JpBPx9yuUcLxOgHrgyJnMCVp8XSZc4Lvh6HnVTabU4w_GnwBgaVv-8TBUeRl9CHZL48CNXOktIrVev4fItJUmDM1Z7c_cfPm2X2C9AfNx4cvoeo0wfEUgLI-zp7ajKCwEVqdZb6OC09VQkofddc9I3LPoXDCQhCObOxrDfDMV6Fol6XotxVrhFP0CVuOUu7ObPrFMrdlU_-2Z4-4UsY-CvYhGdw..&amp;r=widget%2FTurnstile.verifyToken" method="post"><input type="hidden" value="cGdoQ2xxczl1NDQ5SDhuY2RKTUdoSjFwMGFSTW5TMWGDMfGjuCPJjVgQpRJTcj5o1A-bKrOAX6r00TgviBL_Kw==" name="iblt_csrf" /><input id="turnstile_token_6ae09e5a30f05" type="hidden" value="" name="cf-turnstile-response" /><button id="ibTurnstileButton_widget-402b1ac4-a9ce-44b8-8ef0-25630c8b81e8" type="submit" class="btn btn-primary loading disabled" disabled="disabled" name="yt2">Nu sunt robot!</button></form><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+/*<![CDATA[*/
+((turnstileId, language, siteKey, formId, inputId, buttonId, loaderId, humanIdentifiedEvent, beforeInteractiveEvent, formResponseReceivedEvent, options) => {
+const init = function() {
+    const input = document.getElementById(inputId);
+    const button = document.getElementById(buttonId);
+    const form = document.getElementById(formId);
+    const turnstileContainer = document.getElementById(turnstileId);
+    const loader = document.getElementById(loaderId);
+
+    if (form && options.ajaxFormSubmit) {
+        setFormAjaxSubmittable(form, {
+            onComplete: function () {
+                // console.log('form complete');
+                form.dispatchEvent(new Event(formResponseReceivedEvent, {bubbles: true}));
+            },
+            // dezactivare mesaje de eroare
+            messageHandler: function(m) {
+                console.log(m);
+            }
+        });
+    }
+
+    $(form).on('form:formSubmitOk', function(event, data) {
+        form.dispatchEvent(new Event(humanIdentifiedEvent, {bubbles: true}));
+    });
+
+    const widgetId = turnstile.render(document.getElementById(turnstileId), {
+        sitekey: siteKey,
+        language: language,
+        size: 'flexible',
+        // size: 'compact',
+        appearance: 'interaction-only',
+        // appearance: 'always',
+        callback: function (token) {
+            if (input) {
+                input.value = token || "";
+            }
+            if (button) {
+                button.classList.remove('disabled');
+                button.classList.remove('loading');
+                button.removeAttribute('disabled');
+
+                if (options.autoSubmit) {
+                    button.click();
+                }
+            }
+
+            setTimeout(function () {
+                if (loader) {
+                    loader.style.display = '';
+                }
+                turnstileContainer.style.display = 'none';
+            }, 0);
+        },
+
+        'before-interactive-callback': function () {
+            if (loader) {
+                loader.style.display = 'none';
+            }
+            form.dispatchEvent(new Event(beforeInteractiveEvent, {bubbles: true}));
+        }
+    });
+}
+
+var to = setInterval(() => {
+    if (window.turnstile) {
+        clearInterval(to);
+        init();
+    }
+}, 100);
+})('ibTurnstile_widget\x2D402b1ac4\x2Da9ce\x2D44b8\x2D8ef0\x2D25630c8b81e8', 'ro', '0x4AAAAAADD4MQw2knykc0j3', 'turnstile_verify_form_6ae09e5a30f04', 'turnstile_token_6ae09e5a30f05', 'ibTurnstileButton_widget\x2D402b1ac4\x2Da9ce\x2D44b8\x2D8ef0\x2D25630c8b81e8', 'ibTurnstileLoader_widget\x2D402b1ac4\x2Da9ce\x2D44b8\x2D8ef0\x2D25630c8b81e8', 'humanIdentified', 'beforeInteractive', 'formResponseReceivedEvent', {'ajaxFormSubmit':true,'autoSubmit':true});
+/*]]>*/
+</script></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+((id, humanIdentifiedEvent, beforeInteractiveEvent) => {
+const widget = document.getElementById(id);
+
+$(widget).on(humanIdentifiedEvent, function () {
+    window.ibTurnstileVerified = true;
+});
+
+$(widget).on(beforeInteractiveEvent, function () {
+    widget.remove();
+});
+})('widget\x2D402b1ac4\x2Da9ce\x2D44b8\x2D8ef0\x2D25630c8b81e8', 'humanIdentified', 'beforeInteractive');
+/*]]>*/
+</script><script type="text/javascript">
+/*<![CDATA[*/
+((orderFormInitParams) => {
+OrderFormInit(orderFormInitParams);
+
+$('[data-toggle="popover"]').popover({
+    sanitize: false,
+});
+
+$('[data-purpose="seat-map-image"]').on('click', (event) => {
+    blueimp.Gallery([{"href": event.target.getAttribute("href")}]);
+    return false;
+});
+})({'ignoreTariffLimits':false,'texts':{'communicationError':'Eroare\x20de\x20comunca\u021Bie.','ignoreTariffLimits':''},'turnstile':{'challengeRequired':true,'modalHtml':'\x3Cdiv\x20\x20class\x3D\x22modal\x22\x20id\x3D\x22widget\x2D9fd318aa\x2D0bbe\x2D47b7\x2Da5bf\x2D7b50fdf7fe70\x22\x20tabindex\x3D\x22\x2D1\x22\x20role\x3D\x22dialog\x22\x3E\x0A\x20\x20\x20\x20\x3Cdiv\x20class\x3D\x22modal\x2Ddialog\x22\x20role\x3D\x22document\x22\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x3Cdiv\x20class\x3D\x22modal\x2Dcontent\x22\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3Cdiv\x20class\x3D\x22modal\x2Dbody\x22\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3Cdiv\x20\x20class\x3D\x22cloudflare\x2Dturnstile\x2Dwidget\x20text\x2Dcenter\x22\x20style\x3D\x22\x22\x20id\x3D\x22widget\x2Db7fcb6c1\x2Da5fa\x2D47f3\x2D9980\x2De404960b5a91\x22\x20data\x2Dwidget\x2Dtype\x3D\x22cloudflare\x2Dturnstile\x2Dwidget\x22\x3E\x0A\x20\x20\x20\x20\x3Cdiv\x20class\x3D\x22title\x22\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20Doar\x20o\x20mic\u0103\x20verificare\x20\x20\x20\x20\x3C\x2Fdiv\x3E\x0A\x20\x20\x20\x20\x3Cdiv\x20id\x3D\x22ibTurnstileLoader_widget\x2Db7fcb6c1\x2Da5fa\x2D47f3\x2D9980\x2De404960b5a91\x22\x20class\x3D\x22loader\x20loader\x2D1\x22\x3E\x3C\x2Fdiv\x3E\x3Cdiv\x20id\x3D\x22ibTurnstile_widget\x2Db7fcb6c1\x2Da5fa\x2D47f3\x2D9980\x2De404960b5a91\x22\x3E\x3C\x2Fdiv\x3E\x3Cform\x20id\x3D\x22turnstile_verify_form_6ae09e5a30df7\x22\x20style\x3D\x22display\x3Anone\x22\x20action\x3D\x22\x2F\x3Fwidget\x3D8arrgVs8tfSzcAwd\x2DsTi3FXaKrPFwFf6LBLjBDb65iGmjaJWfMAVhKt4B1c9XFewLLqL\x2DjUjhy6ucktqXsOb4NChl2GNYwoaxoGgdMSEAW9ovNwkaT9JVVEtcgg3geDGfjrfxX2zBGhKnThGgNldPK16VDFbWfZA2ZusJcj8pGaA_k2\x2DP0Po3V2OR\x2DwSGlRGBKEhLGaTESGrC7I\x2D8uwvWzFjc6bZAat_GeE_zdejF9YVSS_S9QpoZh7iUDW\x2DVh\x2DlrEI9WEcbP__4x7Rk8YCWC_M0WKGrAw03PMUdhJCij\x2Dwn6OTOoBo\x2DY9CBYpE8vW0fNQ_dnZ0\x2DAju2MKKNZMUqiRIFsmsXNc0xLQnVnu9tkSAzhVHxJathmcKwanXO4Lu99g..\x26amp\x3Br\x3Dwidget\x252FTurnstile.verifyToken\x22\x20method\x3D\x22post\x22\x3E\x3Cinput\x20type\x3D\x22hidden\x22\x20value\x3D\x22cGdoQ2xxczl1NDQ5SDhuY2RKTUdoSjFwMGFSTW5TMWGDMfGjuCPJjVgQpRJTcj5o1A\x2DbKrOAX6r00TgviBL_Kw\x3D\x3D\x22\x20name\x3D\x22iblt_csrf\x22\x20\x2F\x3E\x3Cinput\x20id\x3D\x22turnstile_token_6ae09e5a30df8\x22\x20type\x3D\x22hidden\x22\x20value\x3D\x22\x22\x20name\x3D\x22cf\x2Dturnstile\x2Dresponse\x22\x20\x2F\x3E\x3Cbutton\x20id\x3D\x22ibTurnstileButton_widget\x2Db7fcb6c1\x2Da5fa\x2D47f3\x2D9980\x2De404960b5a91\x22\x20type\x3D\x22submit\x22\x20class\x3D\x22btn\x20btn\x2Dprimary\x20loading\x20disabled\x22\x20disabled\x3D\x22disabled\x22\x20name\x3D\x22yt1\x22\x3ENu\x20sunt\x20robot\x21\x3C\x2Fbutton\x3E\x3C\x2Fform\x3E\x3Cscript\x20type\x3D\x22text\x2Fjavascript\x22\x3E\x0A\x2F\x2A\x3C\x21\x5BCDATA\x5B\x2A\x2F\x0A\x28\x28turnstileId,\x20language,\x20siteKey,\x20formId,\x20inputId,\x20buttonId,\x20loaderId,\x20humanIdentifiedEvent,\x20beforeInteractiveEvent,\x20formResponseReceivedEvent,\x20options\x29\x20\x3D\x3E\x20\x7B\x0Aconst\x20init\x20\x3D\x20function\x28\x29\x20\x7B\x0A\x20\x20\x20\x20const\x20input\x20\x3D\x20document.getElementById\x28inputId\x29\x3B\x0A\x20\x20\x20\x20const\x20button\x20\x3D\x20document.getElementById\x28buttonId\x29\x3B\x0A\x20\x20\x20\x20const\x20form\x20\x3D\x20document.getElementById\x28formId\x29\x3B\x0A\x20\x20\x20\x20const\x20turnstileContainer\x20\x3D\x20document.getElementById\x28turnstileId\x29\x3B\x0A\x20\x20\x20\x20const\x20loader\x20\x3D\x20document.getElementById\x28loaderId\x29\x3B\x0A\x0A\x20\x20\x20\x20if\x20\x28form\x20\x26\x26\x20options.ajaxFormSubmit\x29\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20setFormAjaxSubmittable\x28form,\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20onComplete\x3A\x20function\x20\x28\x29\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2F\x2F\x20console.log\x28\x27form\x20complete\x27\x29\x3B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20form.dispatchEvent\x28new\x20Event\x28formResponseReceivedEvent,\x20\x7Bbubbles\x3A\x20true\x7D\x29\x29\x3B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x7D,\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2F\x2F\x20dezactivare\x20mesaje\x20de\x20eroare\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20messageHandler\x3A\x20function\x28m\x29\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20console.log\x28m\x29\x3B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x7D\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x7D\x29\x3B\x0A\x20\x20\x20\x20\x7D\x0A\x0A\x20\x20\x20\x20\x24\x28form\x29.on\x28\x27form\x3AformSubmitOk\x27,\x20function\x28event,\x20data\x29\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20form.dispatchEvent\x28new\x20Event\x28humanIdentifiedEvent,\x20\x7Bbubbles\x3A\x20true\x7D\x29\x29\x3B\x0A\x20\x20\x20\x20\x7D\x29\x3B\x0A\x0A\x20\x20\x20\x20const\x20widgetId\x20\x3D\x20turnstile.render\x28document.getElementById\x28turnstileId\x29,\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20sitekey\x3A\x20siteKey,\x0A\x20\x20\x20\x20\x20\x20\x20\x20language\x3A\x20language,\x0A\x20\x20\x20\x20\x20\x20\x20\x20size\x3A\x20\x27flexible\x27,\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x2F\x2F\x20size\x3A\x20\x27compact\x27,\x0A\x20\x20\x20\x20\x20\x20\x20\x20appearance\x3A\x20\x27interaction\x2Donly\x27,\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x2F\x2F\x20appearance\x3A\x20\x27always\x27,\x0A\x20\x20\x20\x20\x20\x20\x20\x20callback\x3A\x20function\x20\x28token\x29\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20if\x20\x28input\x29\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20input.value\x20\x3D\x20token\x20\x7C\x7C\x20\x22\x22\x3B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x7D\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20if\x20\x28button\x29\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20button.classList.remove\x28\x27disabled\x27\x29\x3B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20button.classList.remove\x28\x27loading\x27\x29\x3B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20button.removeAttribute\x28\x27disabled\x27\x29\x3B\x0A\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20if\x20\x28options.autoSubmit\x29\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20button.click\x28\x29\x3B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x7D\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x7D\x0A\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20setTimeout\x28function\x20\x28\x29\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20if\x20\x28loader\x29\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20loader.style.display\x20\x3D\x20\x27\x27\x3B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x7D\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20turnstileContainer.style.display\x20\x3D\x20\x27none\x27\x3B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x7D,\x200\x29\x3B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x7D,\x0A\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x27before\x2Dinteractive\x2Dcallback\x27\x3A\x20function\x20\x28\x29\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20if\x20\x28loader\x29\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20loader.style.display\x20\x3D\x20\x27none\x27\x3B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x7D\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20form.dispatchEvent\x28new\x20Event\x28beforeInteractiveEvent,\x20\x7Bbubbles\x3A\x20true\x7D\x29\x29\x3B\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x7D\x0A\x20\x20\x20\x20\x7D\x29\x3B\x0A\x7D\x0A\x0Avar\x20to\x20\x3D\x20setInterval\x28\x28\x29\x20\x3D\x3E\x20\x7B\x0A\x20\x20\x20\x20if\x20\x28window.turnstile\x29\x20\x7B\x0A\x20\x20\x20\x20\x20\x20\x20\x20clearInterval\x28to\x29\x3B\x0A\x20\x20\x20\x20\x20\x20\x20\x20init\x28\x29\x3B\x0A\x20\x20\x20\x20\x7D\x0A\x7D,\x20100\x29\x3B\x0A\x7D\x29\x28\x27ibTurnstile_widget\x5Cx2Db7fcb6c1\x5Cx2Da5fa\x5Cx2D47f3\x5Cx2D9980\x5Cx2De404960b5a91\x27,\x20\x27ro\x27,\x20\x270x4AAAAAADD4MQw2knykc0j3\x27,\x20\x27turnstile_verify_form_6ae09e5a30df7\x27,\x20\x27turnstile_token_6ae09e5a30df8\x27,\x20\x27ibTurnstileButton_widget\x5Cx2Db7fcb6c1\x5Cx2Da5fa\x5Cx2D47f3\x5Cx2D9980\x5Cx2De404960b5a91\x27,\x20\x27ibTurnstileLoader_widget\x5Cx2Db7fcb6c1\x5Cx2Da5fa\x5Cx2D47f3\x5Cx2D9980\x5Cx2De404960b5a91\x27,\x20\x27humanIdentified\x27,\x20\x27beforeInteractive\x27,\x20\x27formResponseReceivedEvent\x27,\x20\x7B\x27ajaxFormSubmit\x27\x3Atrue,\x27autoSubmit\x27\x3Atrue\x7D\x29\x3B\x0A\x2F\x2A\x5D\x5D\x3E\x2A\x2F\x0A\x3C\x2Fscript\x3E\x3C\x2Fdiv\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3C\x2Fdiv\x3E\x0A\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3C\x2Fdiv\x3E\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3C\x2Fdiv\x3E\x0A\x3C\x2Fdiv\x3E\x0A','humanIdentifiedEvent':'humanIdentified','formResponseReceivedEvent':'formResponseReceivedEvent'}});
+/*]]>*/
+</script><script type="text/javascript">
+/*<![CDATA[*/
+((viewItemEventPayload) => {
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push(viewItemEventPayload);
+})({'event':'view_item','ecommerce':{'currency':'RON','items':[{'item_id':'132904','item_name':'Grand\x20Demo\x20Day\x201Health\x3A\x20unde\x20ideile\x20din\x20biotehnologie\x20\u00EEnt\u00E2lnesc\x20investitorii\x20\u0219i\x20industria\x20\x40\x20Academia\x20Rom\u00E2n\u0103\x20\x2D\x20Filiala\x20Timi\u0219oara\x20\x2F\x2029\x20oct,\x20ora\x2017\x3A30'}]}});
+/*]]>*/
+</script></div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div style="text-align:center; padding-top:30px;"><a href="https://www.iabilet.ro/newsletter/manageDigestEmail/"><img style="width:100%; max-width:970px" src="https://imgcdn3.iabilet.ro/_ETA-f2Q1xFfmCxAuZ3lkaDP35E=/fit-in/970x0/filters:no_upscale()/https%3A%2F%2Fstatic3.iabilet.ro%2Fimg%2Fdb%2Fbanner%2F00%2F00%2Fc9%2F00000416580-871e.jpg" alt="" /></a></div><div id="dabilet-widget-6ae09e5a32010" class="dabilet-widget-loader container "><div class="title">Căutăm bilete și pe dăBilet.ro...</div><div class="spinner"></div></div>
+</section>
+
+
+
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-images="[{&quot;href&quot;:&quot;https:\/\/imgcdn3.iabilet.ro\/CtGWzfNTnJhFUtnD-7VMCKl_jWI=\/fit-in\/800x800\/https%3A%2F%2Fstatic3.iabilet.ro%2Fimg%2Fdb%2Fevent%2F02%2F07%2F28%2F00000435743-a4e1.png&quot;},{&quot;href&quot;:&quot;https:\/\/imgcdn3.iabilet.ro\/59cQQmKriZ2hObL0on4bs76Xh_4=\/fit-in\/800x800\/https%3A%2F%2Fstatic3.iabilet.ro%2Fimg%2Fdb%2Fevent%2F02%2F07%2F28%2F00000437245-3693.png&quot;},{&quot;href&quot;:&quot;https:\/\/imgcdn3.iabilet.ro\/cHsZJVx2FMQG-5zI2U64pKpeTFk=\/fit-in\/800x800\/https%3A%2F%2Fstatic3.iabilet.ro%2Fimg%2Fdb%2Fevent%2F02%2F07%2F28%2F00000435775-9a2e.png&quot;}]">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <ol class="indicator"></ol>
+</div>
+
+
+<footer class="global-footer">
+    <div class="footer-top-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                                        <div class="footer-links ">
+                        <img src="https://static.iabilet.ro/img/site/logo_iabilet_footer.png" width="95" height="31" class="logo" />
+                        <ul>
+                                                            <li><a class="toggle" target='_self' href="/contact">Contact</a></li>
+                                                            <li><a class="toggle" target='_self' href="/servicii/">Servicii organizatori</a></li>
+                                                            <li><a class="toggle" target='_self' href="https://www.iabilet.ro/exibit">iabilet eXibit - Pentru expozitii si muzee</a></li>
+                                                            <li><a class="toggle" target='_self' href="/terms/ro/">Termeni și condiții</a></li>
+                                                            <li><a class="toggle" target='_self' href="/privacy/ro/">Confidențialitate</a></li>
+                                                            <li><a class="toggle" target='_self' href="/cookies/ro/">Cookie-uri</a></li>
+                                                            <li><a class="toggle" target='_self' href="/faq/">Întrebări frecvente</a></li>
+                                                            <li><a class="toggle" target='_self' href="/puncte-de-vanzare/">Rețeaua iabilet.ro</a></li>
+                                                            <li><a class="toggle" target='_self' href="/artist/">Artiști</a></li>
+                                                            <li><a class="toggle" target='_blank' href="https://www.dabilet.ro/">dăBilet.ro</a></li>
+                                                            <li><a class="toggle" target='_blank' href="https://anpc.ro">ANPC</a></li>
+                                                            <li><a class="toggle" target='_self' href="/site-ul-tau/">Vrei propriul tău site de bilete?</a></li>
+                                                            <li><a class="toggle" target='_self' href="https://www.iabilet.ro/fiscalitate">Fiscalitate pentru organizatori</a></li>
+                                                            <li><a class="toggle" target='_blank' href="http://iabilet.ro/facturi">Facturi</a></li>
+                                                            <li><a class="toggle" target='_self' href="/bilete-revelion/">Revelion 2027</a></li>
+                                                            <li><a class="toggle" target='_self' href="https://www.iabilet.ro/bilete-beach-please-festival-2027-128686/">Beach, Please 2027</a></li>
+                                                            <li><a class="toggle" target='_blank' href="https://spotlight.iabilet.ro">Spotlight - promoveaza-ti evenimentele</a></li>
+                                                            <li><a class="toggle" target='_self' href="/bilete-voucher-cadou-iabilet-87881/">Voucher Cadou iaBilet</a></li>
+                                                            <li><a class="toggle" target='_self' href="/bilete-nibiru-venue-8404/">Bilete Nibiru</a></li>
+                                                    </ul>
+                        <p class="copyright">&copy; 2012-2026 iaBilet.ro</p>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="footer-nsl">
+                        <h3>Newsletter</h3>
+                        <p>În fiecare săptămână primeşti pe email cele mai tari concerte şi evenimente.</p>
+                        <form class="footer-nsl-form" action="/newsletter/" method="post"><input class="form-control" placeholder="Email" type="text" value="" name="email" id="email" /><input type="hidden" value="submit" name="submit" id="submit" /><input type="hidden" value="footer" name="source" id="source" /><button class="btn btn-submit" type="submit" name="yt0"></button></form>                                            </div>
+
+                    <div class="footer-social clearfix">
+                        <h3>Află noutățile</h3>
+                        <ul class="pull-left" style="margin-right: 15px">
+                            <li style="background-color: #4267B2"><a href="https://www.facebook.com/iaBilet/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li style="background-color: #C13584"><a href="https://www.instagram.com/iabilet/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li style="background-color: #000">
+                                <a href="https://www.tiktok.com/@iabilet" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="14" width="10.5" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>                                </a>
+                            </li>
+                        </ul>
+                        <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FiaBilet%2F&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21"
+                            scrolling="no" frameborder="0"
+                            style="border:none; overflow:hidden; width:100px; height:25px;"
+                            allowTransparency="true" class="pull-left"></iframe>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="footer-mobile">
+                        <h3>Bilete pe mobil</h3>
+                        <p>Cumperi bilete oriunde te-ai afla. Intri la spectacole direct cu mobilul.</p>
+                        <p>
+                            <a href="https://itunes.apple.com/ro/app/iaBilet/id899564929" target="_blank"><img
+                                        src="https://static.iabilet.ro/img/site/logo_apple.png"
+                                        width="42" height="42" border="0"
+                                        style="display:inline;width:42px; height:42px;"/></a>
+                            <a href="https://play.google.com/store/apps/details?id=ro.imedia.iabilet"
+                               target="_blank"><img
+                                        src="https://static.iabilet.ro/img/site/logo_android.png"
+                                        width="42" height="42" border="0"
+                                        style="display:inline;width:42px; height:42px;"/></a>
+                            <a href="https://appgallery.huawei.com/app/C108022575"
+                               target="_blank"><img
+                                        src="https://static.iabilet.ro/img/site/logo_huawei.png"
+                                        width="42" height="42" border="0"
+                                        style="display:inline;width:42px; height:42px;"/></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+                        <div class="row">
+                <div class="col-xs-12 text-center">
+                    <ul class="list-inline">
+                                                    <li><a class="toggle" target='_blank' href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO"><img src="https://static.iabilet.ro/img/site/anpc-solutionare-online-a-litigiilor.svg" width="128" height="32" /></a></li>
+                                                    <li><a class="toggle" target='_blank' href="https://anpc.ro/ce-este-sal/"><img src="https://static.iabilet.ro/img/site/anpc-solutionare-alternativa-a-litigiilor-1.svg" width="128" height="32" /></a></li>
+                                                    <li><a class="toggle" target='_self' href="https://www.iabilet.ro"><img src="https://static.iabilet.ro/img/site/iso-9001.png?1" width="105" height="32" /></a></li>
+                                                    <li><a class="toggle" target='_self' href="https://www.iabilet.ro"><img src="https://static.iabilet.ro/img/site/iso-27001.png?1" width="105" height="32" /></a></li>
+                                                    <li><a class="toggle" target='_blank' href="https://www.facebook.com/photo/?fbid=326404679998293&set=a.186666000638829"><img src="https://static.iabilet.ro/img/db/event/01/66/11/00000246210-f286.png?ts=1700572993" width="116" height="56" /></a></li>
+                                            </ul>
+                </div>
+            </div>
+                    </div>
+    </div>
+    <div class="footer-bottom-container">
+        <div class="quote">
+            "If I had asked people what they wanted, they would have said faster horses."
+            - <a href="http://ro.wikipedia.org/wiki/Henry_Ford" class="author" target="_blank">Henry Ford</a>
+        </div>
+    </div>
+</footer>
+
+<div class="fab-container">
+    <div id="open-ai-chat-button" data-open-ai-chat="{&quot;url&quot;:&quot;https:\/\/wally.ro\/iframe\/e6d27676c5bfa991&quot;,&quot;showIcon&quot;:false,&quot;triggerButton&quot;:{&quot;text&quot;:&quot;Deschide chat-ul AI&quot;,&quot;className&quot;:&quot;open-ai-chat-button&quot;,&quot;containerSelector&quot;:&quot;#open-ai-chat-button&quot;}}" data-hydratable-widget="Fcx6EzLM1t-a51Vy10PTIazEYisGLJqNw1uYimcCfl5ashyU2JsqDBxZCNlsQGo0ExaF5TorRWfrZXV0jbefRWH_x0qcPnD45TySGIHbq_o_jB5X6AnBTsdLsSEpOvUa_lXnlo-RMZfCPLjiqzbH9x0_7JfsPY_5gYij-SjKqWI9G5KKekwdWrzXpuoZq1eybWWNvbEeefChvdlyibV7YrlRw1w8SdqwBPW3tVdY377_T5hV1b9VDZTIMJ9jWbrV48XehZv4h2ppVKC04PmeLcnIWqfp8kgBrXjLCbsff_-2F3XoSmH3dnO_tYKmcY7CL69eISgVxbA0rLWkL0os0LJMFzbNwJR0Ro77S99UodLhgHxGJUUBwyoH1M6a0hakPqrPwSqDeVTw_AOXQWt4Lc9hYhlZCSV9IItNSkSbcP6-utWaAOC4m0CQVfCWbha8QrMZP6s02LHipFYQFmHR2xbuQAemUY00CZafsFVT3ht1MLmSZ7uyMRA6yw7V790f_3P-qKlZT6XUAffqKfYUVnbp8A.." data-hydratable-prefix="wallyChat"></div><script type="text/javascript">
+/*<![CDATA[*/
+((cookieName) => {
+if (! cookieName || getCookieValue(cookieName) !== '1') {
+    return;
+}
+
+function bootOpenAIChat()
+{
+    const widget = document.getElementById('open-ai-chat-button');
+    window.openAIChat = JSON.parse(widget.getAttribute('data-open-ai-chat'));
+
+    const script = document.createElement('script');
+    script.src = 'https://wally.ro/openAIChat.min.js';
+    script.async = true;
+    script.setAttribute('data-wally-chat', '1');
+    document.head.appendChild(script);
+}
+
+const widget = document.getElementById('open-ai-chat-button');
+$(widget).on('hydratablewidgets:ready', function (event) {
+    const html = event.detail && event.detail.html;
+    if (html) {
+        $(widget).replaceWith(html);
+    }
+
+    bootOpenAIChat();
+    return false;
+});
+})('force_wally');
+/*]]>*/
+</script>    <!-- Root for the panel; we hard-isolate its visuals -->
+<div id="a11y-toolbar" class="a11y-toolbar" hidden>
+    <div id="a11y-root" class="a11y-panel" role="dialog" aria-modal="true"
+         aria-labelledby="a11y-title" aria-describedby="a11y-desc">
+
+        <div class="a11y-header">
+            <h2 id="a11y-title" class="a11y-title">Meniu de accesibilitate</h2>
+            <button type="button" class="a11y-close" aria-label="Închide">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+
+        <div class="a11y-body" id="a11y-desc">
+            <div class="a11y-actions-top">
+                <button type="button" class="a11y-btn a11y-btn-ghost" data-action="resetAll">
+                    <span class="a11y-icon-rotate">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                              d="M15.8334 6.66668L12.5 10H15C15 12.7583 12.7584 15 10 15C9.15837 15 8.35837 14.7917 7.66671 14.4167L6.45004 15.6333C7.47504 16.2833 8.69171 16.6667 10 16.6667C13.6834 16.6667 16.6667 13.6833 16.6667 10H19.1667L15.8334 6.66668ZM5.00004 10C5.00004 7.24168 7.24171 5.00001 10 5.00001C10.8417 5.00001 11.6417 5.20834 12.3334 5.58334L13.55 4.36668C12.525 3.71668 11.3084 3.33334 10 3.33334C6.31671 3.33334 3.33337 6.31668 3.33337 10H0.833374L4.16671 13.3333L7.50004 10H5.00004Z"
+                              fill="currentColor"></path>
+                        </svg>
+                    </span>
+                    Resetează setările
+                </button>
+                <button type="button" class="a11y-btn a11y-btn-outline" data-action="hideWidget">
+                    <span class="a11y-icon-hide">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                              d="M10 4.97918C13.1584 4.97918 15.975 6.75418 17.35 9.56251C16.8584 10.5792 16.1667 11.4542 15.3417 12.1625L16.5167 13.3375C17.675 12.3125 18.5917 11.0292 19.1667 9.56251C17.725 5.90418 14.1667 3.31251 10 3.31251C8.94171 3.31251 7.92504 3.47918 6.96671 3.78751L8.34171 5.16251C8.88337 5.05418 9.43337 4.97918 10 4.97918ZM9.10837 5.92918L10.8334 7.65418C11.3084 7.86251 11.6917 8.24584 11.9 8.72084L13.625 10.4458C13.6917 10.1625 13.7417 9.86251 13.7417 9.55418C13.75 7.48751 12.0667 5.81251 10 5.81251C9.69171 5.81251 9.40004 5.85418 9.10837 5.92918ZM1.67504 3.20418L3.90837 5.43751C2.55004 6.50418 1.47504 7.92084 0.833374 9.56251C2.27504 13.2208 5.83337 15.8125 10 15.8125C11.2667 15.8125 12.4834 15.5708 13.6 15.1292L16.45 17.9792L17.625 16.8042L2.85004 2.02084L1.67504 3.20418ZM7.92504 9.45418L10.1 11.6292C10.0667 11.6375 10.0334 11.6458 10 11.6458C8.85004 11.6458 7.91671 10.7125 7.91671 9.56251C7.91671 9.52084 7.92504 9.49584 7.92504 9.45418ZM5.09171 6.62084L6.55004 8.07918C6.35837 8.53751 6.25004 9.03751 6.25004 9.56251C6.25004 11.6292 7.93337 13.3125 10 13.3125C10.525 13.3125 11.025 13.2042 11.475 13.0125L12.2917 13.8292C11.5584 14.0292 10.7917 14.1458 10 14.1458C6.84171 14.1458 4.02504 12.3708 2.65004 9.56251C3.23337 8.37084 4.08337 7.38751 5.09171 6.62084Z"
+                              fill="white"></path>
+                        </svg>
+                    </span>
+                    Ascunde setările de accesibilitate
+                </button>
+            </div>
+
+            <!-- Font -->
+            <section class="a11y-section">
+                <h3 class="a11y-section-title">Setări de font</h3>
+                <div class="a11y-card">
+                    <div class="a11y-row">
+                        <div class="a11y-row-left">
+                            <span class="a11y-icon-font"></span>
+                            <div class="a11y-row-text">Mărește sau micșorează fontul</div>
+                        </div>
+                        <div class="a11y-row-right">
+                            <button type="button" class="a11y-chip" data-action="scale-dec">−</button>
+                            <span class="a11y-perc" data-bind="scale">100%</span>
+                            <button type="button" class="a11y-chip" data-action="scale-inc">+</button>
+                        </div>
+                    </div>
+                    <input type="range" class="a11y-range" data-action="scale" min="1" max="2" step="0.1" value="1"
+                           aria-valuemin="1" aria-valuemax="2" aria-valuenow="1" aria-label="Text size">
+                </div>
+            </section>
+
+            <!-- Content -->
+            <section class="a11y-section">
+                <h3 class="a11y-section-title">Ajustează conținutul</h3>
+
+                <div class="a11y-card a11y-list">
+                    <label class="a11y-list-item">
+                        <span class="a11y-icon-link">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M7.62508 17.9167C6.26478 17.9167 5.10525 17.4374 4.1465 16.4786C3.18775 15.52 2.70837 14.3607 2.70837 13.0006C2.70837 11.6404 3.18775 10.4809 4.1465 9.52198C5.10525 8.56287 6.26478 8.08331 7.62508 8.08331H10.8959C11.1261 8.08331 11.3191 8.16122 11.4747 8.31704C11.6305 8.47286 11.7084 8.66596 11.7084 8.89635C11.7084 9.12656 11.6305 9.31949 11.4747 9.47512C11.3191 9.63058 11.1261 9.70831 10.8959 9.70831H7.62373C6.71481 9.70831 5.93924 10.0295 5.297 10.6719C4.65458 11.3144 4.33337 12.0904 4.33337 13C4.33337 13.9097 4.65458 14.6857 5.297 15.3281C5.93924 15.9705 6.71481 16.2917 7.62373 16.2917H10.8959C11.1261 16.2917 11.3191 16.3696 11.4747 16.5255C11.6305 16.6813 11.7084 16.8743 11.7084 17.1045C11.7084 17.3349 11.6305 17.5278 11.4747 17.6833C11.3191 17.8389 11.1261 17.9167 10.8959 17.9167H7.62508ZM9.75004 13.8125C9.51983 13.8125 9.32691 13.7346 9.17127 13.5788C9.01545 13.423 8.93754 13.23 8.93754 12.9997C8.93754 12.7694 9.01545 12.5764 9.17127 12.421C9.32691 12.2653 9.51983 12.1875 9.75004 12.1875H16.25C16.4802 12.1875 16.6732 12.2654 16.8288 12.4212C16.9846 12.5771 17.0625 12.7701 17.0625 13.0003C17.0625 13.2307 16.9846 13.4236 16.8288 13.5791C16.6732 13.7347 16.4802 13.8125 16.25 13.8125H9.75004ZM15.1041 17.9167C14.8739 17.9167 14.681 17.8388 14.5254 17.683C14.3696 17.5272 14.2916 17.3341 14.2916 17.1037C14.2916 16.8735 14.3696 16.6806 14.5254 16.5249C14.681 16.3695 14.8739 16.2917 15.1041 16.2917H18.3764C19.2853 16.2917 20.0608 15.9705 20.7031 15.3281C21.3455 14.6857 21.6667 13.9097 21.6667 13C21.6667 12.0904 21.3455 11.3144 20.7031 10.6719C20.0608 10.0295 19.2853 9.70831 18.3764 9.70831H15.1041C14.8739 9.70831 14.681 9.6304 14.5254 9.47458C14.3696 9.31876 14.2916 9.12575 14.2916 8.89554C14.2916 8.66515 14.3696 8.47223 14.5254 8.31677C14.681 8.16113 14.8739 8.08331 15.1041 8.08331H18.375C19.7353 8.08331 20.8948 8.56269 21.8536 9.52144C22.8123 10.48 23.2917 11.6394 23.2917 12.9995C23.2917 14.3596 22.8123 15.5191 21.8536 16.4781C20.8948 17.4372 19.7353 17.9167 18.375 17.9167H15.1041Z"
+                                  fill="currentColor"></path>
+                            </svg>
+                        </span>
+                        <span class="a11y-list-text">Subliniază linkurile</span>
+                        <span class="a11y-kbd"><kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd></span>
+                        <input type="checkbox" data-action="underlineLinks" class="a11y-switch">
+                    </label>
+
+                    <label class="a11y-list-item">
+                        <span class="a11y-icon-heading">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M5.75002 22.2084C5.20276 22.2084 4.73954 22.0188 4.36038 21.6396C3.98121 21.2604 3.79163 20.7972 3.79163 20.25V5.75008C3.79163 5.20282 3.98121 4.7396 4.36038 4.36044C4.73954 3.98127 5.20276 3.79169 5.75002 3.79169H20.2499C20.7972 3.79169 21.2604 3.98127 21.6395 4.36044C22.0187 4.7396 22.2083 5.20282 22.2083 5.75008V20.25C22.2083 20.7972 22.0187 21.2604 21.6395 21.6396C21.2604 22.0188 20.7972 22.2084 20.2499 22.2084H5.75002ZM5.75002 20.5834H20.2499C20.3333 20.5834 20.4097 20.5486 20.479 20.4791C20.5485 20.4097 20.5833 20.3334 20.5833 20.25V5.75008C20.5833 5.66667 20.5485 5.59029 20.479 5.52096C20.4097 5.45144 20.3333 5.41669 20.2499 5.41669H5.75002C5.6666 5.41669 5.59023 5.45144 5.5209 5.52096C5.45138 5.59029 5.41663 5.66667 5.41663 5.75008V20.25C5.41663 20.3334 5.45138 20.4097 5.5209 20.4791C5.59023 20.5486 5.6666 20.5834 5.75002 20.5834ZM8.18752 10.3957H14.6875C15.0625 10.3957 15.3819 10.2638 15.6457 10C15.9097 9.73603 16.0417 9.41662 16.0417 9.04179C16.0417 8.66678 15.9097 8.34728 15.6457 8.08331C15.3819 7.81952 15.0625 7.68762 14.6875 7.68762H8.18752C7.81251 7.68762 7.49302 7.81952 7.22904 8.08331C6.96525 8.34728 6.83335 8.66678 6.83335 9.04179C6.83335 9.41662 6.96525 9.73603 7.22904 10C7.49302 10.2638 7.81251 10.3957 8.18752 10.3957Z"
+                                  fill="currentColor"></path>
+                            </svg>
+                        </span>
+                        <span class="a11y-list-text">Subliniază titlurile</span>
+                        <span class="a11y-kbd"><kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd></span>
+                        <input type="checkbox" data-action="underlineHeadings" class="a11y-switch">
+                    </label>
+
+                    <label class="a11y-list-item">
+                        <span class="a11y-icon-motion">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M9.75004 23.2917C8.77233 23.2917 7.85773 23.107 7.00623 22.7376C6.15491 22.3682 5.41048 21.8647 4.77294 21.2271C4.13539 20.5896 3.63192 19.8452 3.2625 18.9939C2.89308 18.1424 2.70837 17.2277 2.70837 16.25C2.70837 14.8778 3.06849 13.6198 3.78873 12.476C4.50878 11.3323 5.47232 10.4724 6.67933 9.89602C7.02654 9.17091 7.4699 8.5386 8.0094 7.9991C8.54908 7.45942 9.17795 7.0195 9.89602 6.67933C10.4501 5.48622 11.2977 4.52612 12.4386 3.79902C13.5795 3.07192 14.85 2.70837 16.25 2.70837C17.2277 2.70837 18.1424 2.89308 18.9939 3.2625C19.8452 3.63192 20.5896 4.13539 21.2271 4.77294C21.8647 5.41048 22.3682 6.15491 22.7376 7.00623C23.107 7.85773 23.2917 8.77233 23.2917 9.75004C23.2917 11.1874 22.9334 12.4583 22.2168 13.5626C21.5 14.6667 20.5346 15.5138 19.3207 16.1041C18.9735 16.8292 18.5319 17.4598 17.9958 17.9958C17.4598 18.5319 16.8292 18.9735 16.1041 19.3207C15.5277 20.5139 14.6746 21.474 13.5447 22.2011C12.415 22.9282 11.1501 23.2917 9.75004 23.2917ZM9.77089 21.6667C10.4709 21.6667 11.1604 21.5243 11.8395 21.2396C12.5188 20.9549 13.0931 20.5347 13.5626 19.9791C12.4875 20.0765 11.474 19.9386 10.5219 19.5656C9.56985 19.1927 8.7438 18.6597 8.04379 17.9666C7.34378 17.2666 6.80735 16.4423 6.4345 15.4939C6.06147 14.5452 5.92362 13.5334 6.02094 12.4584C5.47223 12.9347 5.05379 13.5072 4.76562 14.176C4.47746 14.8448 4.33337 15.5361 4.33337 16.25C4.33337 17.0084 4.47782 17.7143 4.76671 18.3677C5.0556 19.0211 5.44379 19.5916 5.93129 20.0791C6.42565 20.5666 6.99964 20.9531 7.65325 21.2385C8.30668 21.524 9.01256 21.6667 9.77089 21.6667ZM13 18.4167C13.8181 18.4167 14.5567 18.2535 15.2157 17.927C15.8748 17.6006 16.4181 17.2013 16.8459 16.7291C15.7598 16.8265 14.7408 16.6858 13.7887 16.3072C12.8366 15.9287 12.0106 15.393 11.3106 14.7001C10.6106 14 10.0713 13.1757 9.6929 12.2271C9.31427 11.2784 9.17362 10.2611 9.27094 9.17506C8.77784 9.62356 8.37683 10.1791 8.0679 10.8418C7.75878 11.5042 7.60423 12.2237 7.60423 13C7.60423 13.7584 7.74416 14.4625 8.02402 15.1125C8.30388 15.7625 8.69307 16.3313 9.19158 16.8188C9.67908 17.3243 10.2461 17.7171 10.8927 17.9969C11.5393 18.2768 12.2417 18.4167 13 18.4167ZM16.2709 15.1667C16.5959 15.1667 16.9074 15.1396 17.2053 15.0855C17.5032 15.0313 17.8056 14.95 18.1126 14.8417C18.5098 13.7584 18.5685 12.7157 18.2886 11.7136C18.0087 10.7115 17.5258 9.8674 16.8396 9.18129C16.1535 8.49518 15.3094 8.01219 14.3074 7.73233C13.3053 7.45247 12.2626 7.51115 11.1792 7.90837C11.0709 8.21532 10.9896 8.51775 10.9355 8.81567C10.8813 9.11358 10.8542 9.42504 10.8542 9.75004C10.8542 10.5084 10.9942 11.2125 11.274 11.8625C11.5539 12.5125 11.9466 13.0813 12.4521 13.5688C12.9396 14.0743 13.5084 14.4671 14.1584 14.7469C14.8084 15.0268 15.5126 15.1667 16.2709 15.1667ZM20 13.575C20.5278 13.1056 20.9375 12.5518 21.2293 11.9137C21.5209 11.2755 21.6667 10.5542 21.6667 9.75004C21.6667 8.99171 21.5268 8.28754 21.2469 7.63754C20.9671 6.98754 20.5743 6.41879 20.0688 5.93129C19.5813 5.42574 19.0125 5.03303 18.3625 4.75317C17.7125 4.4733 17.0084 4.33337 16.25 4.33337C15.4722 4.33337 14.7628 4.48098 14.1218 4.77619C13.4809 5.07121 12.9153 5.48613 12.4251 6.02094C13.5111 5.92362 14.5302 6.06427 15.4822 6.4429C16.4343 6.82134 17.2603 7.35705 17.9604 8.05002C18.6604 8.75003 19.1996 9.57436 19.578 10.523C19.9565 11.4716 20.0971 12.489 20 13.575Z"
+                                  fill="currentColor"></path>
+                            </svg>
+                        </span>
+                        <span class="a11y-list-text">Dezactivează animațiile</span>
+                        <span class="a11y-kbd"><kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd></span>
+                        <input type="checkbox" data-action="motionOff" class="a11y-switch">
+                    </label>
+                </div>
+            </section>
+
+            <!-- Colors -->
+            <section class="a11y-section">
+                <h3 class="a11y-section-title">Ajustează culorile</h3>
+
+                <div class="a11y-card a11y-list">
+                    <label class="a11y-list-item">
+                        <span class="a11y-icon-bw">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M20.2499 22.2084H5.75002C5.20276 22.2084 4.73954 22.0188 4.36038 21.6396C3.98121 21.2604 3.79163 20.7972 3.79163 20.25V5.75008C3.79163 5.20282 3.98121 4.7396 4.36038 4.36044C4.73954 3.98127 5.20276 3.79169 5.75002 3.79169H20.2499C20.7972 3.79169 21.2604 3.98127 21.6395 4.36044C22.0187 4.7396 22.2083 5.20282 22.2083 5.75008V20.25C22.2083 20.7972 22.0187 21.2604 21.6395 21.6396C21.2604 22.0188 20.7972 22.2084 20.2499 22.2084ZM5.5209 20.4791C5.54166 20.5 5.57118 20.5226 5.60946 20.5468C5.64756 20.5712 5.69441 20.5834 5.75002 20.5834H13V11.9167L20.479 20.4791C20.5 20.4583 20.5225 20.4288 20.5467 20.3905C20.5711 20.3524 20.5833 20.3056 20.5833 20.25V5.75008C20.5833 5.65276 20.5521 5.57287 20.4896 5.5104C20.4271 5.44792 20.3472 5.41669 20.2499 5.41669H13V11.9167L5.5209 20.4791Z"
+                                  fill="currentColor"></path>
+                            </svg>
+                        </span>
+                        <span class="a11y-list-text">Alb-negru</span>
+                        <span class="a11y-kbd"><kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd></span>
+                        <input type="checkbox" data-action="grayscale" class="a11y-switch">
+                    </label>
+
+                    <label class="a11y-list-item">
+                        <span class="a11y-icon-contrast">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M5.75002 22.2084C5.20276 22.2084 4.73954 22.0188 4.36038 21.6396C3.98121 21.2604 3.79163 20.7972 3.79163 20.25V5.75008C3.79163 5.20282 3.98121 4.7396 4.36038 4.36044C4.73954 3.98127 5.20276 3.79169 5.75002 3.79169H20.2499C20.7972 3.79169 21.2604 3.98127 21.6395 4.36044C22.0187 4.7396 22.2083 5.20282 22.2083 5.75008V20.25C22.2083 20.7972 22.0187 21.2604 21.6395 21.6396C21.2604 22.0188 20.7972 22.2084 20.2499 22.2084H5.75002ZM5.75002 20.5834H20.2499C20.3333 20.5834 20.4097 20.5486 20.479 20.4791C20.5485 20.4098 20.5833 20.3334 20.5833 20.25V5.75008C20.5833 5.70837 20.5746 5.66847 20.5573 5.63038C20.54 5.5921 20.5139 5.55562 20.479 5.52096L5.5209 20.4791C5.55556 20.5139 5.59204 20.54 5.63031 20.5574C5.66841 20.5747 5.70831 20.5834 5.75002 20.5834ZM8.55206 9.84373V11.3647C8.55206 11.5512 8.613 11.7055 8.73488 11.8276C8.85675 11.9495 9.01095 12.0104 9.19746 12.0104C9.38379 12.0104 9.53808 11.9495 9.66031 11.8276C9.78255 11.7055 9.84367 11.5512 9.84367 11.3647V9.84373H11.3647C11.5512 9.84373 11.7055 9.78279 11.8275 9.66092C11.9494 9.53904 12.0103 9.38485 12.0103 9.19833C12.0103 9.012 11.9494 8.85771 11.8275 8.73548C11.7055 8.61324 11.5512 8.55213 11.3647 8.55213H9.84367V7.0314C9.84367 6.8447 9.78273 6.69042 9.66086 6.56854C9.53898 6.44649 9.38479 6.38546 9.19827 6.38546C9.01194 6.38546 8.85765 6.44649 8.73542 6.56854C8.61318 6.69042 8.55206 6.8447 8.55206 7.0314V8.55213H7.03133C6.84464 8.55213 6.69036 8.61306 6.56848 8.73494C6.44642 8.85681 6.3854 9.01101 6.3854 9.19752C6.3854 9.38385 6.44642 9.53814 6.56848 9.66038C6.69036 9.78261 6.84464 9.84373 7.03133 9.84373H8.55206ZM17.7772 17.1145H13.9855C13.7988 17.1145 13.6445 17.0536 13.5227 16.9317C13.4006 16.8098 13.3396 16.6556 13.3396 16.4691C13.3396 16.2828 13.4006 16.1285 13.5227 16.0063C13.6445 15.884 13.7988 15.8229 13.9855 15.8229H17.7772C17.9637 15.8229 18.1179 15.8839 18.2398 16.0057C18.3618 16.1276 18.4229 16.2818 18.4229 16.4683C18.4229 16.6546 18.3618 16.8089 18.2398 16.9312C18.1179 17.0534 17.9637 17.1145 17.7772 17.1145Z"
+                                  fill="currentColor"></path>
+                            </svg>
+                        </span>
+                        <span class="a11y-list-text">Contrast crescut</span>
+                        <span class="a11y-kbd"><kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>8</kbd></span>
+                        <input type="checkbox" data-action="contrastHigh" class="a11y-switch">
+                    </label>
+
+                    <label class="a11y-list-item">
+                        <span class="a11y-icon-invert">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M13 22.2083C10.7445 22.2083 8.82646 21.4287 7.24588 19.8696C5.66529 18.3107 4.875 16.4215 4.875 14.2019C4.875 13.0729 5.0886 12.0375 5.51579 11.0957C5.94281 10.1541 6.5223 9.30697 7.25427 8.55423L11.9771 3.92298C12.1257 3.7854 12.2889 3.68122 12.4667 3.61044C12.6444 3.53966 12.8222 3.50427 13 3.50427C13.1778 3.50427 13.3556 3.53966 13.5333 3.61044C13.7111 3.68122 13.8743 3.7854 14.0229 3.92298L18.7457 8.55423C19.4777 9.30697 20.0572 10.1594 20.4842 11.1114C20.9114 12.0635 21.125 13.0937 21.125 14.2019C21.125 16.4215 20.3347 18.3107 18.7541 19.8696C17.1735 21.4287 15.2555 22.2083 13 22.2083ZM13 20.5833V5.19996L8.39583 9.74996C7.76389 10.3458 7.28993 11.0201 6.97396 11.7728C6.65799 12.5256 6.5 13.3353 6.5 14.2019C6.5 15.9533 7.13194 17.4547 8.39583 18.7061C9.65972 19.9576 11.1944 20.5833 13 20.5833Z"
+                                  fill="currentColor"></path>
+                            </svg>
+                        </span>
+                        <span class="a11y-list-text">Inversează culorile</span>
+                        <span class="a11y-kbd"><kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>/</kbd></span>
+                        <input type="checkbox" data-action="invert" class="a11y-switch">
+                    </label>
+                </div>
+            </section>
+
+            <!-- Cursor -->
+            <section class="a11y-section">
+                <h3 class="a11y-section-title">Ajustează cursorul</h3>
+
+                <div class="a11y-card a11y-list">
+                    <button type="button" class="a11y-list-item a11y-btn-row" data-action="cursorLight">
+                        <span class="a11y-icon-cursor-light">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.52073 15.3541L10.8791 12.0626H15.8273L8.52073 6.31662V15.3541ZM15.9957 22.2709C15.65 22.4346 15.3042 22.452 14.9584 22.3229C14.6125 22.1936 14.3576 21.9561 14.1939 21.6103L10.9856 14.7165L8.6751 17.9354C8.39596 18.327 8.02961 18.4502 7.57606 18.3051C7.12268 18.1599 6.896 17.8499 6.896 17.375V4.9917C6.896 4.58202 7.07998 4.28826 7.44795 4.11041C7.81611 3.93274 8.16332 3.97093 8.48958 4.22497L18.2959 11.9416C18.6695 12.2277 18.7775 12.5903 18.6198 13.0292C18.4622 13.468 18.1493 13.6873 17.6811 13.6873H13.4854L16.6563 20.4687C16.8202 20.8145 16.8376 21.1603 16.7083 21.506C16.5792 21.852 16.3417 22.1069 15.9957 22.2709Z"
+                                  fill="currentColor"></path>
+                            </svg>
+                        </span>
+                        <span class="a11y-list-text">Cursor mare deschis</span>
+                        <span class="a11y-kbd"><kbd>Ctrl/Cmd</kbd> + <kbd>[</kbd></span>
+                    </button>
+
+                    <button type="button" class="a11y-list-item a11y-btn-row" data-action="cursorDark">
+                        <span class="a11y-icon-cursor-dark">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M15.9957 22.2709C15.65 22.4346 15.3042 22.452 14.9584 22.3229C14.6125 22.1936 14.3576 21.9561 14.1939 21.6103L10.9856 14.7165L8.6751 17.9354C8.39596 18.327 8.02961 18.4502 7.57606 18.3051C7.12268 18.1599 6.896 17.8499 6.896 17.375V4.9917C6.896 4.58202 7.07998 4.28826 7.44795 4.11041C7.81611 3.93274 8.16332 3.97093 8.48958 4.22497L18.2959 11.9416C18.6695 12.2277 18.7775 12.5903 18.6198 13.0292C18.4622 13.468 18.1493 13.6873 17.6811 13.6873H13.4854L16.6563 20.4687C16.8202 20.8145 16.8376 21.1603 16.7083 21.506C16.5792 21.852 16.3417 22.1069 15.9957 22.2709Z"
+                                  fill="currentColor"></path>
+                            </svg>
+                        </span>
+                        <span class="a11y-list-text">Cursor mare închis</span>
+                        <span class="a11y-kbd"><kbd>Ctrl/Cmd</kbd> + <kbd>]</kbd></span>
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <div class="a11y-footer">
+            <p class="a11y-help">
+                Navigare: Tab / Shift+Tab • Închidere: Esc • Meniu: Alt/Cmd/Ctrl + A
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Floating button -->
+<button id="a11y-toggle" class="a11y-fab" aria-label="Meniu de accesibilitate" title="Meniu de accesibilitate"
+        aria-expanded="false"></button>
+</div>
+
+
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery(function($) {
+preloadFonts();
+(function() {
+    const $btn = $('[data-clipboard-text]');
+    const clipboard = new Clipboard('[data-clipboard-text]');
+    $btn.tooltip({ container: 'body' });
+    clipboard.on('success', () => $btn.tooltip('hide'));
+})();
+
+            $(document).ready(function () {
+                $.get('/site/event/dabilet.tickets?id=132904', function (html) {
+                    if (html !== '') {
+                        $('#dabilet-widget-6ae09e5a32010').html(html);
+                    } else {
+                        $('#dabilet-widget-6ae09e5a32010').fadeOut(1000);
+                    }
+                });
+            });
+        
+EventPage.init();
+((cookieName, url) => {
+// jquery fix
+if ($.event.props.indexOf('detail') === -1) {
+    $.event.props.push('detail');
+}
+
+$(document.body).on('hydratablewidgets:ready', function (event) {
+    const html = event.detail && event.detail.html;
+    if (typeof html !== 'string' || event.target === document.body) {
+        return;
+    }
+
+    $(event.target).replaceWith(html);
+});
+
+function createHydratableEvent(html, isAuth) {
+    return new CustomEvent('hydratablewidgets:ready', {
+        bubbles: true,
+        cancelable: true,
+        detail: {
+            html: html,
+            isAuth: isAuth
+        }
+    });
+}
+
+const nodes = document.querySelectorAll('[data-hydratable-widget]');
+if (!nodes.length) {
+    return;
+}
+
+if (! getCookieValue(cookieName)) {
+    nodes.forEach(function (el) {
+        el.dispatchEvent(createHydratableEvent(null, false));
+    });
+    return;
+}
+
+const widgets = {};
+nodes.forEach(function (el) {
+    let ref;
+    do {
+        ref = 'hw' + Math.random().toString(36).slice(2);
+    } while (widgets[ref] || document.querySelector('[data-hydratable-ref="' + ref + '"]'));
+
+    el.setAttribute('data-hydratable-ref', ref);
+    const pack = el.getAttribute('data-hydratable-widget');
+    const prefix = el.getAttribute('data-hydratable-prefix');
+    widgets[ref] = prefix ? prefix + ':' + pack : pack;
+});
+
+defaultAjaxUrlRequest({
+    url: url,
+    method: 'post',
+    data: {widgets: widgets},
+    messageHandler: function () {}
+}).then(function (data) {
+    if (!data || !data.widgets) {
+        return;
+    }
+
+    Object.keys(data.widgets).forEach(function (ref) {
+        const item = data.widgets[ref];
+        const el = document.querySelector('[data-hydratable-ref="' + ref + '"]');
+        if (!el || !item || item.error || typeof item.html !== 'string') {
+            return;
+        }
+
+        el.dispatchEvent(createHydratableEvent(item.html, true));
+    });
+});
+})('ib_user', '\x2Fwidget\x2Fhydratable.batchRefresh\x2F');
+initHeaderCalendar("ro_RO");
+(function () {
+    if (typeof CookieConsent === 'undefined') {
+        return;
+    }
+
+    // aplicam culorile brandului peste tema librariei
+    document.documentElement.style.setProperty('--cc-btn-primary-bg', "#006aca");
+    document.documentElement.style.setProperty('--cc-btn-primary-hover-bg', "#006aca");
+    document.documentElement.classList.add("cc--darkmode");
+
+    CookieConsent.run({
+        mode: 'opt-in',
+        autoShow: true,
+        hideFromBots: true,
+        manageScriptTags: true,
+        autoClearCookies: true,
+
+        cookie: {
+            name: 'cookiepermission_v3',
+            domain: 'iabilet.ro',
+            path: '/',
+            sameSite: 'Lax',
+            secure: window.location.protocol === 'https:'
+        },
+
+        guiOptions: {
+            consentModal: {
+                layout: 'box wide',
+                position: 'bottom center',
+                equalWeightButtons: false,
+                flipButtons: false
+            },
+            preferencesModal: {
+                layout: 'box',
+                position: 'right',
+                equalWeightButtons: false,
+                flipButtons: false
+            }
+        },
+
+        categories: {
+            necessary: {
+                enabled: true,
+                readOnly: true,
+            },
+            analytics: {},
+            marketing: {}
+        },
+
+        language: {
+            default: "ro",
+            translations: {
+                "ro": {
+                    consentModal: {
+                        description: "<div class=\"m-b-sm\">Vrem s\u0103 \u00ee\u021bi oferim pe iaBilet cea mai bun\u0103 experien\u021b\u0103 atunci c\u00e2nd cau\u021bi \u0219i cumperi bilete la evenimentele tale preferate. Folosim cookie-uri \u0219i tehnologii similare pentru: func\u021bionarea corect\u0103 a platformei, analiza traficului \u0219i a performan\u021bei, recomand\u0103ri personalizate de evenimente \u0219i oferte, afi\u0219area de reclame relevante pentru tine.<\/div><div class=\"m-b-sm\">Prin ap\u0103sarea butonului \u201eAccept toate\u201d, e\u0219ti de acord ca datele tale (precum activitatea pe site \u0219i informa\u021biile despre dispozitiv) s\u0103 fie utilizate de noi \u0219i partenerii no\u0219tri pentru scopurile de mai sus. Dac\u0103 alegi \u201eRefuz\u0103 toate\u201d, vom folosi doar cookie-uri strict necesare func\u021bion\u0103rii site-ului \u0219i nu vom personaliza con\u021binutul sau reclamele. Po\u021bi modifica preferin\u021bele oric\u00e2nd ap\u0103s\u00e2nd pe \u201eAdministreaz\u0103 preferin\u021bele\u201d.<\/div><div>Afl\u0103 mai multe \u00een <a href=\"\/cookies\/ro\/\" target=\"_blank\">Politica de utilizare Cookie-uri.<\/a><\/div>",
+                        acceptAllBtn: "Accept toate",
+                        acceptNecessaryBtn: "Accept necesare",
+                        showPreferencesBtn: "Editeaz\u0103 preferin\u021bele",
+                    },
+                    preferencesModal: {
+                        title: "Preferin\u021be cookie-uri",
+                        acceptAllBtn: "Accept toate",
+                        acceptNecessaryBtn: "Accept necesare",
+                        savePreferencesBtn: "Salveaz\u0103 preferin\u021bele",
+                        closeIconLabel: "cookieBanner.closeButton",
+                        sections: [
+                            {
+                                title: '',
+                                description: "<div class=\"m-b-sm\">Vrem s\u0103 \u00ee\u021bi oferim pe iaBilet cea mai bun\u0103 experien\u021b\u0103 atunci c\u00e2nd cau\u021bi \u0219i cumperi bilete la evenimentele tale preferate. Folosim cookie-uri \u0219i tehnologii similare pentru: func\u021bionarea corect\u0103 a platformei, analiza traficului \u0219i a performan\u021bei, recomand\u0103ri personalizate de evenimente \u0219i oferte, afi\u0219area de reclame relevante pentru tine.<\/div><div class=\"m-b-sm\">Prin ap\u0103sarea butonului \u201eAccept toate\u201d, e\u0219ti de acord ca datele tale (precum activitatea pe site \u0219i informa\u021biile despre dispozitiv) s\u0103 fie utilizate de noi \u0219i partenerii no\u0219tri pentru scopurile de mai sus. Dac\u0103 alegi \u201eRefuz\u0103 toate\u201d, vom folosi doar cookie-uri strict necesare func\u021bion\u0103rii site-ului \u0219i nu vom personaliza con\u021binutul sau reclamele. Po\u021bi modifica preferin\u021bele oric\u00e2nd ap\u0103s\u00e2nd pe \u201eAdministreaz\u0103 preferin\u021bele\u201d.<\/div><div>Afl\u0103 mai multe \u00een <a href=\"\/cookies\/ro\/\" target=\"_blank\">Politica de utilizare Cookie-uri.<\/a><\/div>"
+                            },
+                            {
+                                title: "Cookie-uri necesare",
+                                description: "Aceste cookie-uri sunt esen\u021biale pentru func\u021bionarea corect\u0103 a site-ului \u0219i nu pot fi dezactivate. Ele sunt utilizate pentru func\u021bionalit\u0103\u021bi de baz\u0103 precum securitatea, autentificarea sau gestionarea sesiunii.",
+                                linkedCategory: 'necessary'
+                            },
+                            {
+                                title: "Cookie-uri de analiz\u0103",
+                                description: "Aceste cookie-uri ne ajut\u0103 s\u0103 \u00een\u021belegem cum este utilizat site-ul (de exemplu, ce pagini sunt vizitate cel mai des) pentru a \u00eembun\u0103t\u0103\u021bi performan\u021ba \u0219i experien\u021ba utilizatorilor.",
+                                linkedCategory: 'analytics'
+                            },
+                            {
+                                title: "Cookie-uri de marketing",
+                                description: "Aceste cookie-uri sunt folosite pentru a afi\u0219a reclame relevante pentru tine \u0219i pentru a m\u0103sura eficien\u021ba campaniilor publicitare. Ele pot fi setate de noi sau de parteneri externi, precum Google sau Meta.",
+                                linkedCategory: 'marketing'
+                            },
+                        ]
+                    }
+                }
+            }
+        },
+
+        onFirstConsent: function () {
+            handleConsentUpdate();
+        },
+
+        onConsent: function () {
+            handleConsentUpdate();
+        },
+
+        onChange: function () {
+            handleConsentUpdate();
+        },
+
+        onModalShow: function () {
+            var modal = document.getElementById('cc-main');
+            if (modal) {
+                document.body.style.paddingBottom = modal.offsetHeight + 'px';
+            }
+        },
+
+        onModalHide: function () {
+            document.body.style.paddingBottom = '0';
+        }
+    });
+
+    var consentUpdateQueued = false;
+    function handleConsentUpdate() {
+        if (consentUpdateQueued) {
+            return;
+        }
+
+        consentUpdateQueued = true;
+        setTimeout(function () {
+            consentUpdateQueued = false;
+            if (typeof window.consentGrantedAll === 'function') {
+                window.consentGrantedAll();
+            }
+        }, 0);
+    }
+
+    window.ccRevokeChoice = function () {
+        CookieConsent.showPreferences();
+    };
+})();
+
+$(document).ready(function () {
+    initHeaderAutocomplete();
+    initHeaderMenu();
+    initGASearchMonitor();
+});
+
+});
+/*]]>*/
+</script>
+</body>
+</html>

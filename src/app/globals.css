@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+html { -webkit-text-size-adjust: 100%; }
+body { @apply bg-slate-50 text-slate-900 antialiased; }
+
+/* Horizontal chip rows scroll with momentum on iOS and hide the scrollbar. */
+.chip-row { @apply flex gap-2 overflow-x-auto px-4 pb-1; scrollbar-width: none; -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity; }
+.chip-row::-webkit-scrollbar { display: none; }
+.chip { @apply inline-flex min-h-[44px] shrink-0 items-center gap-1 whitespace-nowrap rounded-full border border-slate-200 bg-white px-4 text-[15px] font-medium text-slate-700 shadow-sm transition active:scale-[0.97]; scroll-snap-align: start; }
+.chip-on { @apply border-brand-600 bg-brand-600 text-white; }
+.badge { @apply inline-flex items-center rounded-md px-2 py-0.5 text-xs font-semibold; }
+.btn { @apply inline-flex min-h-[44px] items-center justify-center rounded-xl px-4 font-semibold transition active:scale-[0.98]; }
+.btn-primary { @apply btn bg-brand-600 text-white hover:bg-brand-700; }
+.btn-ghost { @apply btn border border-slate-200 bg-white text-slate-800 hover:bg-slate-50; }
+.input { @apply min-h-[44px] w-full rounded-xl border border-slate-300 bg-white px-3 text-base; } /* 16px avoids iOS zoom-on-focus */
+.label { @apply mb-1 block text-sm font-semibold text-slate-700; }
+.card { @apply rounded-2xl border border-slate-200 bg-white shadow-sm; }

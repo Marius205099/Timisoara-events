@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+.env
+.env.local
+.env.*.local
+.data/
+coverage/
+test-results/
+playwright-report/
+*.tsbuildinfo
+next-env.d.ts
+.vercel
+.tools/
+artifact/public/
+.claude/

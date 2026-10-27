@@ -1,0 +1,45 @@
+name: Ingest events
+
+# 06:00 and 18:00 Europe/Bucharest. Cron is UTC, so we fire at every UTC hour
+# that can be 06:00/18:00 in either EET (UTC+2) or EEST (UTC+3); the script
+# keeps only the matching slot and the slot key makes duplicates no-ops.
+on:
+  schedule:
+    - cron: "0 3,4,15,16 * * *"
+  workflow_dispatch:
+    inputs:
+      source:
+        description: "Comma-separated source ids (empty = all)"
+        required: false
+        default: ""
+
+concurrency:
+  group: ingest
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    # Only for the Vercel + Supabase deployment (set repository variable USE_SUPABASE=true).
+    if: vars.USE_SUPABASE == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Run ingestion
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          AI_MODEL: ${{ vars.AI_MODEL }}
+          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
+          NOMINATIM_EMAIL: ${{ vars.NOMINATIM_EMAIL }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            if [ -n "${{ inputs.source }}" ]; then npm run ingest -- --manual --source "${{ inputs.source }}"; else npm run ingest -- --manual; fi
+          else
+            npm run ingest
+          fi

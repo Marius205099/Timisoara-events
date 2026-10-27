@@ -1,0 +1,66 @@
+name: Public website (GitHub Pages)
+
+# Builds the same single page as the claude.ai Artifact and publishes it as a public website
+# (no login needed): https://<user>.github.io/<repo>/
+# Runs at 06:00 and 18:00 Europe/Bucharest (cron is UTC: 04/16 UTC = 06/18 winter, 07/19 summer)
+# and on demand. The embedded database (.data/pglite, incl. the geocoding cache) is kept between runs.
+on:
+  schedule:
+    - cron: "0 4,16 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      DEMO_DATA: "off"
+      NOMINATIM_EMAIL: ${{ vars.NOMINATIM_EMAIL }}
+      NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Restore database
+        uses: actions/cache/restore@v4
+        with:
+          path: .data
+          key: pglite-${{ github.run_id }}
+          restore-keys: pglite-
+      - name: Collect events from all sources
+        run: npx tsx scripts/ingest.ts --manual
+      - name: Save database
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .data
+          key: pglite-${{ github.run_id }}
+      - name: Build page
+        run: npx tsx scripts/build-artifact.ts
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: artifact/public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
