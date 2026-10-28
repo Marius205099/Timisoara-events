@@ -35,7 +35,11 @@ export interface DedupeCandidate {
  * Two records are the same event when they happen at (nearly) the same place and
  * time and their titles strongly overlap. Deterministic; AI may only *suggest* extra pairs.
  */
-export function isLikelyDuplicate(a: DedupeCandidate, b: DedupeCandidate): { duplicate: boolean; score: number } {
+export function isLikelyDuplicate(
+  a: DedupeCandidate,
+  b: DedupeCandidate,
+  opts: { sameSlotIsEnough?: boolean } = {},
+): { duplicate: boolean; score: number } {
   if (!a.startsAt || !b.startsAt) return { duplicate: false, score: 0 };
   const dt = Math.abs(
     DateTime.fromISO(a.startsAt, { setZone: true }).toMillis() - DateTime.fromISO(b.startsAt, { setZone: true }).toMillis(),
@@ -43,8 +47,11 @@ export function isLikelyDuplicate(a: DedupeCandidate, b: DedupeCandidate): { dup
   if (dt > 45 * 60 * 1000) return { duplicate: false, score: 0 };
 
   let samePlace = false;
+  let sameBuilding = false;
   if (a.venue.lat != null && a.venue.lng != null && b.venue.lat != null && b.venue.lng != null) {
-    samePlace = geodesicDistanceMeters(a.venue as LatLng, b.venue as LatLng) <= 250;
+    const d = geodesicDistanceMeters(a.venue as LatLng, b.venue as LatLng);
+    samePlace = d <= 250;
+    sameBuilding = d <= 60;
   } else if (a.venue.name && b.venue.name) {
     samePlace = titleSimilarity(a.venue.name, b.venue.name) >= 0.6;
   }
@@ -52,7 +59,9 @@ export function isLikelyDuplicate(a: DedupeCandidate, b: DedupeCandidate): { dup
 
   const sim = titleSimilarity(a.title, b.title);
   const score = sim * 0.8 + (1 - dt / (45 * 60 * 1000)) * 0.2;
-  return { duplicate: sim >= 0.6, score: Math.round(score * 100) / 100 };
+  // A newspaper headline rarely matches the venue's own title; for such secondary sources the
+  // same building (not merely the same street) within 45 minutes is the same event.
+  return { duplicate: sim >= 0.6 || (Boolean(opts.sameSlotIsEnough) && sameBuilding), score: Math.round(score * 100) / 100 };
 }
 
 export function slugify(s: string): string {

@@ -30,6 +30,7 @@ export const KNOWN_VENUES: KnownVenue[] = [
   { key: "iulius-town", name: "Iulius Town", address: "Piața Consiliul Europei nr. 2, Timișoara", locality: "Timișoara", lat: 45.7663807, lng: 21.2283909, aliases: ["iulius town", "iulius mall timisoara"] },
   { key: "muzeul-consumatorului", name: "Muzeul Consumatorului Comunist", address: "Str. Arh. László Székely, Timișoara", locality: "Timișoara", lat: 45.7432619, lng: 21.2243079, aliases: ["muzeul consumatorului comunist"] },
   { key: "fikl-art-stage", name: "Fikl Art Stage Gallery", address: "Str. Gheorghe Lazăr nr. 4, Timișoara", locality: "Timișoara", lat: 45.7579016, lng: 21.226602, aliases: ["fikl art stage gallery", "fikl art stage"] },
+  { key: "shopping-city", name: "Shopping City Timișoara", address: "Calea Șagului nr. 100, Timișoara", locality: "Timișoara", lat: 45.7246565, lng: 21.1986958, aliases: ["shopping city timisoara", "shopping city"] },
   { key: "faber", name: "FABER", address: "Splaiul Peneș Curcanul, Timișoara", locality: "Timișoara", lat: 45.7613915, lng: 21.2515801, aliases: ["faber", "faber timisoara"] },
   { key: "cinema-victoria", name: "Cinema Victoria", address: "Str. Coriolan Băran, Timișoara", locality: "Timișoara", lat: 45.7413111, lng: 21.2245278, aliases: ["cinema victoria"] },
   { key: "cinema-studio", name: "Cinema Studio", address: "Str. Nikolaus Lenau nr. 2, Timișoara", locality: "Timișoara", lat: 45.7524281, lng: 21.2260403, aliases: ["cinema studio"] },

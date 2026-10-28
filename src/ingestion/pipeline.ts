@@ -205,6 +205,7 @@ export async function processRawEvent(raw: RawEvent, ctx: ProcessContext): Promi
         const r = isLikelyDuplicate(
           { title: raw.title, startsAt: dates.sessions[0].startsAt, venue: { lat: location.venue.lat, lng: location.venue.lng!, name: location.venue.name } },
           { title: c.title, startsAt: new Date(c.starts_at).toISOString(), venue: { lat: c.lat ?? undefined, lng: c.lng ?? undefined } },
+          { sameSlotIsEnough: Boolean(source.config?.secondary) && location.decision === "verified" },
         );
         if (r.duplicate) {
           existing = c;

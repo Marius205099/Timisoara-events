@@ -4,6 +4,8 @@ import { jsonLdAdapter } from "./jsonld";
 import { teatrulGermanAdapter } from "./teatrul-german";
 import { tribeAdapter } from "./tribe";
 import { visitTimisoaraAdapter } from "./visit-timisoara";
+import { mallAdapter } from "./malls";
+import { pressAdapter } from "./press";
 
 export const ADAPTERS: Record<string, SourceAdapter> = {
   [icalAdapter.id]: icalAdapter,
@@ -11,4 +13,6 @@ export const ADAPTERS: Record<string, SourceAdapter> = {
   [jsonLdAdapter.id]: jsonLdAdapter,
   [teatrulGermanAdapter.id]: teatrulGermanAdapter,
   [visitTimisoaraAdapter.id]: visitTimisoaraAdapter,
+  [mallAdapter.id]: mallAdapter,
+  [pressAdapter.id]: pressAdapter,
 };

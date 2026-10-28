@@ -80,3 +80,17 @@ About 55 sites were checked for public access, robots.txt, and a machine-readabl
 - **Opera Națională Română** (ort.ro): TLS certificate error. **Muzeul de Artă**: connection reset.
 - **Kompostor, Entertix, LiveTickets, bilete.ro**: no Event JSON-LD, or city-level location only.
 - **ambilet.ro**: robots.txt disallows crawling. **infomusic.ro**: 403. **Facebook events**: automated access forbidden.
+
+## Extension — 2026-10-28 (all local press, malls)
+
+### Added
+| Source | Format | Notes |
+|---|---|---|
+| Iulius Town | Public events page, free-text dates | Ranges become one all-day session; weekly series resolved from dated programme lines; open-ended items and campaigns over 31 days skipped. |
+| Shopping City Timișoara (shoppingcitytm.ro) | Next.js page data with ISO start/end | Campaigns over 31 days skipped. Venue added to the registry. |
+| Press: TION, Pressalert, Opinia Timișoarei, Banatul Meu, De Banat, Ziua de Vest, Timiș Plus, Vestic, Timișoara Express, Renașterea Bănățeană, Redeșteptarea (Lugoj), Consiliul Județean Timiș | RSS (culture / leisure sections where they exist) | Deterministic extraction: an article becomes an event only with ONE future date and ONE identifiable place in its lead; agendas, reports and multi-venue articles are skipped. Merged with another source's event only when the place is verified and it is the same building (≤ 60 m) within 45 minutes. |
+
+### Not added
+- **Facebook groups and pages**: Facebook's terms forbid automated collection, and groups require a signed-in
+  account. Events that organisers publish on Facebook usually also appear on iaBilet, Zile și Nopți or the
+  venues' own sites, which are ingested.
