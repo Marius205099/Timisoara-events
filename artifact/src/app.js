@@ -39,6 +39,7 @@
     switch (q) {
       case "azi": return { days: [t], label: `Azi, ${human(t)}` };
       case "maine": return { days: [addDays(t, 1)], label: `Mâine, ${human(addDays(t, 1))}` };
+      case "vineri": { const d = nextWeekday(t, 5); return { days: [d], label: cap(human(d)) }; }
       case "sambata": { const d = nextWeekday(t, 6); return { days: [d], label: cap(human(d)) }; }
       case "duminica": { const d = nextWeekday(t, 0); return { days: [d], label: cap(human(d)) }; }
       case "weekend": {
@@ -123,7 +124,7 @@
   function renderBar() {
     const dates = $("dates");
     dates.replaceChildren(
-      ...[["azi", "Azi"], ["maine", "Mâine"], ["sambata", "Sâmbătă"], ["duminica", "Duminică"], ["weekend", "Weekend"]].map(([id, l]) =>
+      ...[["azi", "Azi"], ["maine", "Mâine"], ["vineri", "Vineri"], ["sambata", "Sâmbătă"], ["duminica", "Duminică"], ["weekend", "Weekend"]].map(([id, l]) =>
         chip(l, S.q === id, () => { S.q = S.q === id ? "7zile" : id; S.date = ""; render(); })),
     );
     const pick = chip(S.q === "data" && S.date ? S.date.split("-").reverse().slice(0, 2).join(".") : "Alege data", S.q === "data", () => {});
@@ -147,7 +148,7 @@
   }
 
   function renderPanel() {
-    const p = $("panel");
+    const p = $("panel-body");
     const sec = (title, nodes) => { const d = document.createElement("div"); const h = document.createElement("h3"); h.textContent = title; const r = document.createElement("div"); r.className = "row"; r.append(...nodes); d.append(h, r); return d; };
     const toggle = (arr, v) => (arr.includes(v) ? arr.filter((x) => x !== v) : [...arr, v]);
     const one = (key, opts) => opts.map(([v, l]) => chip(l, S[key] === v, () => { S[key] = v; render(); }));
@@ -195,7 +196,9 @@
   function renderList() {
     const { r, items } = filtered();
     const scheduled = items.filter((x) => !x.e.k);
-    $("count").innerHTML = `${esc(r.label)} <small>· ${scheduled.length} ${scheduled.length === 1 ? "eveniment" : "evenimente"}</small>`;
+    const n = `${scheduled.length} ${scheduled.length === 1 ? "eveniment" : "evenimente"}`;
+    $("count").innerHTML = `${esc(r.label)} <small>· ${n}</small>`;
+    $("panel-ok").textContent = `OK · arată ${n}`;
     const list = $("list");
     list.replaceChildren();
     if (!scheduled.length) {
@@ -219,7 +222,7 @@
   function openDetail(id, push) {
     const e = EVENTS.find((x) => x.id === id);
     if (!e) return closeDetail();
-    if (push) { try { history.replaceState(null, "", "#" + id); } catch (_) {} }
+    if (push) { listScroll = window.scrollY; try { history.pushState({ cf: "detail" }, "", "#" + id); } catch (_) {} }
     const upcoming = e.s.filter((s) => s.d >= todayBucharest());
     const [al] = ageLabel(e);
     const pr = price(e);
@@ -251,21 +254,47 @@
       </div>
       <p class="note">Datele pot fi modificate de organizator. Verificați la sursa oficială înainte de deplasare.</p>`;
     $("list").hidden = true; $("count").hidden = true; $("bar").hidden = true; sec.hidden = false;
-    $("back").addEventListener("click", closeDetail);
+    $("back").addEventListener("click", () => (history.state && history.state.cf === "detail" ? history.back() : closeDetail()));
     window.scrollTo(0, 0);
   }
 
+  let listScroll = 0;
   function closeDetail() {
     $("detail").hidden = true; $("list").hidden = false; $("count").hidden = false; $("bar").hidden = false;
-    try { history.replaceState(null, "", location.pathname + location.search); } catch (_) {}
+    if (location.hash) { try { history.replaceState(null, "", location.pathname + location.search); } catch (_) {} }
+    window.scrollTo(0, listScroll);
   }
 
   function render() { renderBar(); renderList(); }
 
-  $("more").addEventListener("click", () => {
-    const p = $("panel"); p.hidden = !p.hidden; $("more").setAttribute("aria-expanded", String(!p.hidden)); if (!p.hidden) renderPanel();
+  // ---------- Filter sheet: full screen on phones, OK applies and returns to the start of the list ----------
+  function openSheet() {
+    $("panel").hidden = false; document.documentElement.classList.add("lock"); $("more").setAttribute("aria-expanded", "true");
+    renderPanel();
+    try { history.pushState({ cf: "sheet" }, "", location.href); } catch (_) {}
+    $("panel-close").focus();
+  }
+  function closeSheet() {
+    if ($("panel").hidden) return;
+    $("panel").hidden = true; document.documentElement.classList.remove("lock"); $("more").setAttribute("aria-expanded", "false");
+    window.scrollTo(0, 0);
+    $("more").focus({ preventScroll: true });
+  }
+  // Closing goes through history when the sheet added an entry, so the phone's Back button and OK agree.
+  const dismissSheet = () => (history.state && history.state.cf === "sheet" ? history.back() : closeSheet());
+  const resetFilters = () => { Object.assign(S, { ages: [], family: false, cats: [], price: "", io: "", tod: [], dist: "", loc: "" }); save(); render(); };
+  // We place the scroll ourselves (top after OK, previous position after a detail), not the browser.
+  try { history.scrollRestoration = "manual"; } catch (_) {}
+  $("more").addEventListener("click", openSheet);
+  $("panel-ok").addEventListener("click", dismissSheet);
+  $("panel-close").addEventListener("click", dismissSheet);
+  $("panel-reset").addEventListener("click", resetFilters);
+  document.addEventListener("keydown", (ev) => { if (ev.key === "Escape" && !$("panel").hidden) dismissSheet(); });
+  window.addEventListener("popstate", () => {
+    if (!$("panel").hidden) closeSheet();
+    else if (!$("detail").hidden) closeDetail();
   });
-  $("reset").addEventListener("click", () => { Object.assign(S, { ages: [], family: false, cats: [], price: "", io: "", tod: [], dist: "", loc: "" }); save(); render(); });
+  $("reset").addEventListener("click", resetFilters);
   $("built").textContent = `Actualizat: ${DATA.built} (ora României) · ${EVENTS.length} evenimente verificate.`;
 
   render();

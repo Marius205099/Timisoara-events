@@ -2,6 +2,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ce facem în Timișoara?</title>
 <meta name="claude:viewport-fit-sides" content="cover">
+<meta name="theme-color" content="#f3f6f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1719" media="(prefers-color-scheme: dark)">
+<meta name="format-detection" content="telephone=no">
 <meta name="description" content="Evenimente și activități în Timișoara și la maximum 50 km.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +29,18 @@
       <button type="button" class="tool" id="more" aria-expanded="false" aria-controls="panel">Mai multe filtre</button>
       <button type="button" class="link" id="reset" hidden>Resetează</button>
     </div>
-    <div class="panel" id="panel" hidden></div>
+  </div>
+</div>
+
+<div class="sheet" id="panel" role="dialog" aria-modal="true" aria-labelledby="panel-title" hidden>
+  <div class="sheet-head">
+    <h2 id="panel-title">Filtre</h2>
+    <button type="button" class="x" id="panel-close" aria-label="Închide filtrele">✕</button>
+  </div>
+  <div class="sheet-body panel" id="panel-body"></div>
+  <div class="sheet-foot">
+    <button type="button" class="link" id="panel-reset">Resetează</button>
+    <button type="button" class="ok" id="panel-ok">OK</button>
   </div>
 </div>
 
