@@ -20,6 +20,9 @@
 
   // Only verified venues within 50 km ever reach the page; this re-check keeps it that way.
   const EVENTS = DATA.events.filter((e) => e.v && typeof e.v.km === "number" && e.v.km <= MAX_KM);
+  // Places to visit any day (museums, karting, climbing, parks…), same 50 km rule.
+  const PLACES = (DATA.places || []).filter((p) => typeof p.km === "number" && p.km <= MAX_KM);
+  const PCATS = DATA.pcats || {};
 
   // ---------- Calendar math on Bucharest dates (YYYY-MM-DD strings; DST cannot shift a calendar day) ----------
   const todayBucharest = () => new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
@@ -65,7 +68,7 @@
   }
 
   // ---------- State ----------
-  const S = { q: "7zile", date: "", ages: [], family: false, cats: [], price: "", io: "", tod: [], dist: "", loc: "" };
+  const S = { view: "events", pcat: "", q: "7zile", date: "", ages: [], family: false, cats: [], price: "", io: "", tod: [], dist: "", loc: "" };
   try { Object.assign(S, JSON.parse(localStorage.getItem("cf-filters") || "{}"), { q: "7zile", date: "" }); } catch (_) { /* storage unavailable */ }
   const save = () => { try { localStorage.setItem("cf-filters", JSON.stringify({ ages: S.ages, family: S.family })); } catch (_) {} };
 
@@ -122,6 +125,18 @@
   }
 
   function renderBar() {
+    const places = S.view === "places";
+    $("tab-events").setAttribute("aria-selected", String(!places));
+    $("tab-places").setAttribute("aria-selected", String(places));
+    $("dates").hidden = places;
+    $("pcats").hidden = !places;
+    $("more").hidden = places;
+    if (places) {
+      $("pcats").replaceChildren(
+        chip("Toate", !S.pcat, () => { S.pcat = ""; render(); }),
+        ...Object.entries(PCATS).filter(([id]) => PLACES.some((p) => p.cat === id)).map(([id, l]) => chip(l, S.pcat === id, () => { S.pcat = S.pcat === id ? "" : id; render(); })),
+      );
+    }
     const dates = $("dates");
     dates.replaceChildren(
       ...[["azi", "Azi"], ["maine", "Mâine"], ["vineri", "Vineri"], ["sambata", "Sâmbătă"], ["duminica", "Duminică"], ["weekend", "Weekend"]].map(([id, l]) =>
@@ -143,7 +158,7 @@
 
     const extra = S.cats.length + S.tod.length + [S.price, S.io, S.dist, S.loc].filter(Boolean).length;
     $("more").textContent = extra ? `Mai multe filtre (${extra})` : "Mai multe filtre";
-    $("reset").hidden = !(extra || S.ages.length || S.family);
+    $("reset").hidden = places ? !(S.pcat || S.ages.length || S.family) : !(extra || S.ages.length || S.family);
     if (!$("panel").hidden) renderPanel();
   }
 
@@ -219,6 +234,97 @@
     }
   }
 
+  // ---------- Places (any day) ----------
+  const IO = { indoor: "Interior", outdoor: "Exterior", mixed: "Interior și exterior" };
+  function placeAgeMatch(p) {
+    const kids = ["0-2", "3-7", "8-12", "13-17"];
+    if (S.family && !p.ag.some((a) => kids.includes(a))) return false;
+    return !S.ages.length || S.ages.some((a) => p.ag.includes(a));
+  }
+  const placeAges = (p) => (p.ag.length === AGES.length ? "Toate vârstele" : p.ag.map((id) => group(id)[1]).join(", "));
+  const filteredPlaces = () => PLACES.filter((p) => (!S.pcat || p.cat === S.pcat) && placeAgeMatch(p));
+
+  function placeCard(p) {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "card place";
+    b.innerHTML = `
+      <div class="when" aria-hidden="true"><span>${p.km < 1 ? "sub" : "la"}</span><b>${p.km < 1 ? "1" : Math.round(p.km)}</b><span>km</span></div>
+      <div>
+        <h4>${esc(p.n)}</h4>
+        <p class="meta">${esc(p.d)}</p>
+        <div class="tags">
+          <span class="tag">${esc(PCATS[p.cat] || p.cat)}</span>
+          <span class="tag">${esc(placeAges(p))}</span>
+          ${p.free ? '<span class="tag free">Gratuit</span>' : ""}
+        </div>
+        <p class="src">${esc(p.l)}${p.ax ? " · zona aproximativă" : ""}</p>
+      </div>`;
+    b.addEventListener("click", () => openPlace(p.id, true));
+    return b;
+  }
+
+  function renderPlaces() {
+    const items = filteredPlaces();
+    const n = `${items.length} ${items.length === 1 ? "loc" : "locuri"}`;
+    $("count").innerHTML = `Locuri &amp; activități <small>· ${n}</small>`;
+    const list = $("list");
+    list.replaceChildren();
+    if (!items.length) {
+      const d = document.createElement("div");
+      d.className = "empty";
+      d.innerHTML = "<strong>Niciun loc pentru aceste filtre.</strong>Încercați altă categorie sau altă grupă de vârstă.";
+      list.appendChild(d);
+      return;
+    }
+    const intro = document.createElement("p");
+    intro.className = "note";
+    intro.textContent = "Locuri de vizitat și activități disponibile în orice zi, în Timișoara și la maximum 50 km. Programul și prețurile se schimbă: verificați pe site-ul oficial înainte de deplasare.";
+    list.appendChild(intro);
+    for (const [cat, label] of Object.entries(PCATS)) {
+      const inCat = items.filter((p) => p.cat === cat).sort((a, b) => a.km - b.km);
+      if (!inCat.length) continue;
+      const h = document.createElement("h3"); h.className = "day"; h.textContent = label; list.appendChild(h);
+      const grid = document.createElement("div"); grid.className = "grid"; grid.append(...inCat.map(placeCard)); list.appendChild(grid);
+    }
+  }
+
+  function openPlace(id, push) {
+    const p = PLACES.find((x) => x.id === id);
+    if (!p) return closeDetail();
+    if (push) { listScroll = window.scrollY; try { history.pushState({ cf: "detail" }, "", "#loc-" + id); } catch (_) {} }
+    const dir = `https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lng}`;
+    const sec = $("detail");
+    sec.innerHTML = `
+      <button type="button" class="back" id="back">← Înapoi la listă</button>
+      <div class="dhead">
+        <div class="tags"><span class="tag">${esc(PCATS[p.cat] || p.cat)}</span>${p.free ? '<span class="tag free">Gratuit</span>' : ""}</div>
+        <h2>${esc(p.n)}</h2>
+        <p>${esc(p.d)}</p>
+      </div>
+      <dl class="facts">
+        <dt>Unde</dt><dd>${esc(p.a)}${fold(p.a).includes(fold(p.l)) ? "" : ", " + esc(p.l)}<br><span class="km">${km(p.km)} în linie dreaptă de centrul Timișoarei${p.ax ? " · poziție aproximativă (zona)" : ""}</span></dd>
+        <dt>Pentru</dt><dd>${esc(placeAges(p))}</dd>
+        <dt>Tip</dt><dd>${esc(IO[p.io] || "")}</dd>
+        <dt>Program</dt><dd><span class="note">Programul și prețurile se pot schimba. Verificați pe site-ul oficial sau telefonic înainte de deplasare.</span></dd>
+      </dl>
+      <div class="actions">
+        ${p.u ? `<a class="btn primary" href="${esc(p.u)}" target="_blank" rel="noopener">Site oficial ↗</a>` : ""}
+        <a class="btn${p.u ? "" : " primary"}" href="${dir}" target="_blank" rel="noopener">Indicații pe hartă ↗</a>
+      </div>`;
+    $("list").hidden = true; $("count").hidden = true; $("bar").hidden = true; sec.hidden = false;
+    $("back").addEventListener("click", () => (history.state && history.state.cf === "detail" ? history.back() : closeDetail()));
+    window.scrollTo(0, 0);
+  }
+
+  function setView(v) {
+    if (S.view === v) return;
+    S.view = v;
+    try { history.replaceState(null, "", v === "places" ? "#locuri" : location.pathname + location.search); } catch (_) {}
+    render();
+    window.scrollTo(0, 0);
+  }
+
   function openDetail(id, push) {
     const e = EVENTS.find((x) => x.id === id);
     if (!e) return closeDetail();
@@ -261,11 +367,12 @@
   let listScroll = 0;
   function closeDetail() {
     $("detail").hidden = true; $("list").hidden = false; $("count").hidden = false; $("bar").hidden = false;
-    if (location.hash) { try { history.replaceState(null, "", location.pathname + location.search); } catch (_) {} }
+    const keep = S.view === "places" ? "#locuri" : "";
+    if (location.hash !== keep) { try { history.replaceState(null, "", location.pathname + location.search + keep); } catch (_) {} }
     window.scrollTo(0, listScroll);
   }
 
-  function render() { renderBar(); renderList(); }
+  function render() { renderBar(); if (S.view === "places") renderPlaces(); else renderList(); }
 
   // ---------- Filter sheet: full screen on phones, OK applies and returns to the start of the list ----------
   function openSheet() {
@@ -295,9 +402,13 @@
     else if (!$("detail").hidden) closeDetail();
   });
   $("reset").addEventListener("click", resetFilters);
-  $("built").textContent = `Actualizat: ${DATA.built} (ora României) · ${EVENTS.length} evenimente verificate.`;
+  $("tab-events").addEventListener("click", () => setView("events"));
+  $("tab-places").addEventListener("click", () => setView("places"));
+  $("built").textContent = `Actualizat: ${DATA.built} (ora României) · ${EVENTS.length} evenimente verificate · ${PLACES.length} locuri de vizitat.`;
 
-  render();
   const h = location.hash.slice(1);
-  if (h && EVENTS.some((e) => e.id === h)) openDetail(h, false);
+  if (h === "locuri" || h.startsWith("loc-")) S.view = "places";
+  render();
+  if (h.startsWith("loc-") && PLACES.some((p) => p.id === h.slice(4))) openPlace(h.slice(4), false);
+  else if (h && EVENTS.some((e) => e.id === h)) openDetail(h, false);
 })();

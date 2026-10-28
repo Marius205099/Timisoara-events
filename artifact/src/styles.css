@@ -49,6 +49,11 @@ button { font: inherit; color: inherit; }
 
 .bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
 .bar-inner { display: grid; gap: 10px; padding-block: 10px; }
+.tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 4px; border-radius: 14px; background: var(--bega-soft); }
+.tabs button { min-height: 44px; border: 0; border-radius: 10px; background: transparent; color: var(--bega); font-weight: 800; font-size: 16px; cursor: pointer; }
+.tabs button[aria-selected="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 3px rgb(0 0 0 / .12); }
+.row[hidden], .tool[hidden] { display: none; }
+.card.place .meta { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .row { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; margin-inline: -4px; padding: 2px 4px; }
 .row::-webkit-scrollbar { display: none; }
 .chip { flex: none; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); font-weight: 600; font-size: 16px; cursor: pointer; position: relative; display: inline-flex; align-items: center; }

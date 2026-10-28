@@ -11,6 +11,7 @@ import { getDb } from "../src/data/db";
 import { listPublicEvents } from "../src/data/public";
 import { TIMEZONE, TIMISOARA_CENTER } from "../src/lib/config";
 import { checkGeofence } from "../src/lib/geo";
+import { PLACES, PLACE_CATEGORIES } from "../src/data/places";
 import { SOURCES } from "../src/ingestion/sources";
 
 const DIR = path.join(process.cwd(), "artifact");
@@ -41,7 +42,16 @@ async function main() {
       ver: DateTime.fromISO(e.lastVerifiedAt).setZone(TIMEZONE).toFormat("dd.LL.yyyy HH:mm"),
     });
   }
-  const data = { built: now.toFormat("dd.LL.yyyy, HH:mm"), center: TIMISOARA_CENTER, events: out };
+  // Places to visit any day: the same 50 km rule applies; a place outside it fails the build.
+  const places = PLACES.map((p) => {
+    const g = checkGeofence({ lat: p.lat, lng: p.lng });
+    if (!g.ok) throw new Error(`place ${p.id} is outside the 50 km radius`);
+    return {
+      id: p.id, n: p.name, cat: p.cat, d: p.desc, a: p.address, l: p.locality, lat: p.lat, lng: p.lng,
+      km: Math.round(g.distanceKm * 10) / 10, ax: p.approx ? 1 : 0, u: p.url ?? null, ag: p.ages, io: p.io, free: p.free ? 1 : 0,
+    };
+  });
+  const data = { built: now.toFormat("dd.LL.yyyy, HH:mm"), center: TIMISOARA_CENTER, events: out, places, pcats: PLACE_CATEGORIES };
   const src = (f: string) => fs.readFileSync(path.join(DIR, "src", f), "utf8");
   const html = src("page.html")
     .replace("/*__STYLES__*/", src("styles.css"))
@@ -54,7 +64,7 @@ async function main() {
   fs.mkdirSync(path.join(DIR, "public"), { recursive: true });
   fs.writeFileSync(path.join(DIR, "public", "index.html"), `<!doctype html>\n<html lang="ro">\n${html}\n</html>\n`);
   fs.writeFileSync(path.join(DIR, "public", ".nojekyll"), "");
-  console.log(`built artifact/ce-facem-timisoara.html: ${out.length} events, ${(html.length / 1024).toFixed(0)} KB`);
+  console.log(`built artifact/ce-facem-timisoara.html: ${out.length} events, ${places.length} places, ${(html.length / 1024).toFixed(0)} KB`);
   process.exit(0);
 }
 main().catch((e) => { console.error(e); process.exit(1); });

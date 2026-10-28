@@ -23,7 +23,12 @@
 
 <div class="bar" id="bar">
   <div class="wrap bar-inner">
+    <div class="tabs" id="tabs" role="tablist" aria-label="Ce cauți">
+      <button type="button" role="tab" id="tab-events" aria-selected="true" aria-controls="main">Evenimente</button>
+      <button type="button" role="tab" id="tab-places" aria-selected="false" aria-controls="main">Locuri &amp; activități</button>
+    </div>
     <nav class="row" id="dates" aria-label="Alege ziua"></nav>
+    <div class="row" id="pcats" role="group" aria-label="Tip de loc" hidden></div>
     <div class="row" id="ages" role="group" aria-label="Vârstă"></div>
     <div class="tools">
       <button type="button" class="tool" id="more" aria-expanded="false" aria-controls="panel">Mai multe filtre</button>
