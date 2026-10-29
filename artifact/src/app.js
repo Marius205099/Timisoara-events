@@ -37,19 +37,26 @@
   // A summary that only repeats the title (plus a few words of boilerplate) adds nothing.
   const usefulSummary = (e) => (e.sum && fold(e.sum).replace(fold(e.title), "").trim().length >= 40 ? e.sum : "");
 
+  // @day-chips-start
+  /**
+   * Quick-date chips in calendar order, without repeats: Azi, Mâine, then each following day by
+   * name up to the first Sunday after tomorrow. Thursday → Azi, Mâine, Sâmbătă, Duminică;
+   * Monday → Azi, Mâine, Miercuri … Duminică; Saturday → Azi, Mâine; Sunday → Azi, Mâine, Marți … Duminică.
+   */
+  function dayChips(t) {
+    const out = [["azi", "Azi", t], ["maine", "Mâine", addDays(t, 1)]];
+    const lastSunday = nextWeekday(addDays(t, 1), 0);
+    for (let d = addDays(t, 2); d <= lastSunday; d = addDays(d, 1)) out.push(["zi", cap(DAYS[weekday(d)]), d]);
+    return out;
+  }
+  // @day-chips-end
+
   function range(q, custom) {
     const t = todayBucharest();
     switch (q) {
       case "azi": return { days: [t], label: `Azi, ${human(t)}` };
       case "maine": return { days: [addDays(t, 1)], label: `Mâine, ${human(addDays(t, 1))}` };
-      case "vineri": { const d = nextWeekday(t, 5); return { days: [d], label: cap(human(d)) }; }
-      case "sambata": { const d = nextWeekday(t, 6); return { days: [d], label: cap(human(d)) }; }
-      case "duminica": { const d = nextWeekday(t, 0); return { days: [d], label: cap(human(d)) }; }
-      case "weekend": {
-        const sun = nextWeekday(t, 0);
-        const days = weekday(t) === 0 ? [t] : [nextWeekday(t, 6), sun];
-        return { days, label: days.length === 1 ? `Weekend: ${human(sun)}` : `Weekend: ${toUTC(days[0]).getUTCDate()} ${MONTHS[toUTC(days[0]).getUTCMonth()]} – ${toUTC(sun).getUTCDate()} ${MONTHS[toUTC(sun).getUTCMonth()]}` };
-      }
+      case "zi":
       case "data": { const d = custom || t; return { days: [d], label: cap(human(d)) }; }
       default: return { days: Array.from({ length: 7 }, (_, i) => addDays(t, i)), label: "Următoarele 7 zile" };
     }
@@ -139,8 +146,10 @@
     }
     const dates = $("dates");
     dates.replaceChildren(
-      ...[["azi", "Azi"], ["maine", "Mâine"], ["vineri", "Vineri"], ["sambata", "Sâmbătă"], ["duminica", "Duminică"], ["weekend", "Weekend"]].map(([id, l]) =>
-        chip(l, S.q === id, () => { S.q = S.q === id ? "7zile" : id; S.date = ""; render(); })),
+      ...dayChips(todayBucharest()).map(([id, l, d]) => {
+        const on = id === "zi" ? S.q === "zi" && S.date === d : S.q === id;
+        return chip(l, on, () => { if (on) { S.q = "7zile"; S.date = ""; } else { S.q = id; S.date = id === "zi" ? d : ""; } render(); });
+      }),
     );
     const pick = chip(S.q === "data" && S.date ? S.date.split("-").reverse().slice(0, 2).join(".") : "Alege data", S.q === "data", () => {});
     const input = document.createElement("input");
