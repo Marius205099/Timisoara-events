@@ -43,8 +43,8 @@ jobs:
           restore-keys: pglite-
       - name: Collect events from all sources
         run: npx tsx scripts/ingest.ts --manual
+      # Only a successful run is kept: a failed or cancelled one must not replace a good database.
       - name: Save database
-        if: always()
         uses: actions/cache/save@v4
         with:
           path: .data
